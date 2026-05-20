@@ -62,14 +62,14 @@ export default function Hero() {
             <div
               style={{
                 display: "flex",
-                flexDirection: "column",
-                alignItems: "flex-start",
-                gap: 16,
+                flexDirection: "row",
+                alignItems: "center",
+                gap: 12,
                 marginTop: 32,
               }}
             >
               <a href="#" style={pillStyle("filled")}>
-                Prenota una call conoscitiva <span style={{ fontFamily: '"Mackinac", serif', fontSize: 11.2 }}>→</span>
+                Prenota una call <span style={{ fontFamily: '"Mackinac", serif', fontSize: 11.2 }}>→</span>
               </a>
               <a href="#" style={pillStyle("ghost")}>
                 Scopri il metodo <span style={{ fontFamily: '"Mackinac", serif', fontSize: 11.2 }}>→</span>
@@ -117,16 +117,16 @@ function pillStyle(variant: "filled" | "ghost"): React.CSSProperties {
   const base: React.CSSProperties = {
     display: "inline-flex",
     alignItems: "center",
-    gap: 10,
-    justifyContent: "space-between",
+    gap: 8,
+    justifyContent: "center",
     fontFamily: '"Mallory", sans-serif',
     fontSize: 11.1,
     letterSpacing: "0.01em",
-    padding: "18px 36px",
+    padding: "14px 22px",
     borderRadius: 999,
-    minWidth: 280,
     border: "1.5px solid var(--accent)",
     transition: "background .2s, color .2s",
+    whiteSpace: "nowrap",
   };
   if (variant === "filled") return { ...base, background: "var(--accent)", color: "#fff" };
   return { ...base, background: "transparent", color: "var(--accent)" };
