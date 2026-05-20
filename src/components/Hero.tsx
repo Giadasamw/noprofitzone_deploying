@@ -39,7 +39,7 @@ export default function Hero() {
                 maxWidth: 320,
               }}
             >
-              <p style={{ fontSize: 9.8, lineHeight: 1.55, color: "var(--ink-soft)" }}>
+              <p style={{ fontSize: 11.8, lineHeight: 1.55, color: "var(--ink-soft)" }}>
                 L&apos;impatto di una buona idea arriva con la sua realizzazione. E la
                 realizzazione, di solito, passa attraverso oceani burocratici.
               </p>
@@ -47,7 +47,7 @@ export default function Hero() {
 
             <p
               style={{
-                fontSize: 9.8,
+                fontSize: 11.8,
                 lineHeight: 1.6,
                 color: "var(--ink)",
                 maxWidth: 320,
@@ -120,7 +120,7 @@ function pillStyle(variant: "filled" | "ghost"): React.CSSProperties {
     gap: 10,
     justifyContent: "space-between",
     fontFamily: '"Mallory", sans-serif',
-    fontSize: 9.1,
+    fontSize: 11.1,
     letterSpacing: "0.01em",
     padding: "18px 36px",
     borderRadius: 999,
