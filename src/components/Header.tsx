@@ -24,7 +24,7 @@ export default function Header() {
         }}
       >
         <a href="#" aria-label="No Profit Zone">
-          <Image src="/logo-npz.png" alt="No Profit Zone" height={44} width={160} style={{ height: 44, width: "auto" }} />
+          <Image src="/logo-npz.png" alt="No Profit Zone" height={53} width={192} style={{ height: 53, width: "auto" }} />
         </a>
 
         <nav style={{ display: "flex", gap: 36 }}>
