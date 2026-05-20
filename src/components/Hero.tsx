@@ -30,17 +30,33 @@ export default function Hero() {
               <em style={{ fontStyle: "italic", fontWeight: 400 }}>essere scritte bene.</em>
             </h1>
 
+            <div
+              style={{
+                border: "1.5px solid var(--accent)",
+                borderRadius: 20,
+                padding: "16px 20px",
+                marginTop: 48,
+                maxWidth: 320,
+              }}
+            >
+              <p style={{ fontSize: 9.8, lineHeight: 1.55, color: "var(--ink-soft)" }}>
+                L&apos;impatto di una buona idea arriva con la sua realizzazione. E la
+                realizzazione, di solito, passa attraverso oceani burocratici.
+              </p>
+            </div>
+
             <p
               style={{
                 fontSize: 9.8,
-                lineHeight: 1.55,
-                color: "var(--ink-soft)",
+                lineHeight: 1.6,
+                color: "var(--ink)",
                 maxWidth: 320,
-                marginTop: 48,
+                marginTop: 32,
               }}
             >
-              L&apos;impatto di una buona idea arriva con la sua realizzazione. E la
-              realizzazione, di solito, passa attraverso oceani burocratici.
+              No Profit Zone è uno studio di consulenza per il terzo settore. Lavoriamo con
+              fondazioni, ONG ed enti culturali sulla scrittura dei bandi e sulla
+              rendicontazione dei progetti — perché l&apos;attraversamento sia più breve.
             </p>
 
             <div
@@ -49,7 +65,7 @@ export default function Hero() {
                 flexDirection: "column",
                 alignItems: "flex-start",
                 gap: 16,
-                marginTop: 48,
+                marginTop: 32,
               }}
             >
               <a href="#" style={pillStyle("filled")}>
@@ -58,21 +74,6 @@ export default function Hero() {
               <a href="#" style={pillStyle("ghost")}>
                 Scopri il metodo <span style={{ fontFamily: '"Mackinac", serif', fontSize: 11.2 }}>→</span>
               </a>
-            </div>
-
-            <div
-              style={{
-                border: "1.5px solid var(--ink)",
-                borderRadius: 28,
-                padding: "28px 32px",
-                marginTop: 48,
-              }}
-            >
-              <p style={{ fontSize: 9.8, lineHeight: 1.6, color: "var(--ink)" }}>
-                No Profit Zone è uno studio di consulenza per il terzo settore. Lavoriamo con
-                fondazioni, ONG ed enti culturali sulla scrittura dei bandi e sulla
-                rendicontazione dei progetti — perché l&apos;attraversamento sia più breve.
-              </p>
             </div>
           </div>
 
