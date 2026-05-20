@@ -83,7 +83,6 @@ export default function Hero() {
               position: "relative",
               width: "100%",
               aspectRatio: "3/4",
-              borderRadius: "999px 999px 4px 4px",
               overflow: "hidden",
               background: "var(--paper-2)",
             }}
