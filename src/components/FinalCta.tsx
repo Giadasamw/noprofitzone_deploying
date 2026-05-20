@@ -42,7 +42,7 @@ export default function FinalCta() {
               Una prima conversazione, gratuita, di{" "}
               <em style={{ fontStyle: "italic", fontWeight: 400 }}>trenta minuti.</em>
             </h2>
-            <p style={{ fontSize: 10.5, lineHeight: 1.65, color: "var(--ink-soft)", maxWidth: 480, marginBottom: 48 }}>
+            <p style={{ fontSize: 12.5, lineHeight: 1.65, color: "var(--ink-soft)", maxWidth: 480, marginBottom: 48 }}>
               Nella call conoscitiva chiediamo all&apos;organizzazione di raccontarci la propria
               mission e il bando o il progetto su cui sta valutando di lavorare. Sulla base di
               questa conversazione diciamo se lo studio è in grado di offrire un contributo
@@ -57,7 +57,7 @@ export default function FinalCta() {
                 background: "var(--ink)",
                 color: "var(--paper)",
                 fontFamily: '"Mallory", sans-serif',
-                fontSize: 9.1,
+                fontSize: 11.1,
                 padding: "14px 24px",
                 borderRadius: 999,
                 border: "1.5px solid var(--ink)",

@@ -67,14 +67,14 @@ export default function Services() {
               <h3 style={{ fontFamily: '"Mackinac", Georgia, serif', fontSize: 21, lineHeight: 1.1, letterSpacing: "-0.01em", fontWeight: 700, marginBottom: 18 }}>
                 {s.title}
               </h3>
-              <p style={{ color: "var(--ink-soft)", lineHeight: 1.65, fontSize: 10.5, maxWidth: 440, marginBottom: 28 }}>
+              <p style={{ color: "var(--ink-soft)", lineHeight: 1.65, fontSize: 12.5, maxWidth: 440, marginBottom: 28 }}>
                 {s.body}
               </p>
               <a
                 href="#"
                 style={{
                   fontFamily: '"Mallory", sans-serif',
-                  fontSize: 7.7,
+                  fontSize: 9.7,
                   letterSpacing: "0.18em",
                   textTransform: "uppercase",
                   color: "var(--ink)",

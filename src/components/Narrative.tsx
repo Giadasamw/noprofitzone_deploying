@@ -64,7 +64,7 @@ const h2Style: React.CSSProperties = {
 };
 
 const paraStyle: React.CSSProperties = {
-  fontSize: 11.2,
+  fontSize: 13.2,
   lineHeight: 1.65,
   marginBottom: 22,
   maxWidth: 580,

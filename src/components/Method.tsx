@@ -41,7 +41,7 @@ export default function Method() {
           >
             Il metodo in <em style={{ fontStyle: "italic", fontWeight: 400 }}>quattro fasi.</em>
           </h2>
-          <p style={{ fontSize: 10.5, lineHeight: 1.65, color: "var(--ink-soft)", maxWidth: 460 }}>
+          <p style={{ fontSize: 12.5, lineHeight: 1.65, color: "var(--ink-soft)", maxWidth: 460 }}>
             Ogni progetto segue lo stesso percorso, dalla prima analisi alla chiusura. Le due
             partner dello studio seguono direttamente tutte le fasi, senza passaggi a
             collaboratori junior o consulenti esterni.
@@ -75,7 +75,7 @@ export default function Method() {
             <h4 style={{ fontFamily: '"Mackinac", Georgia, serif', fontSize: 15.4, fontWeight: 700, letterSpacing: "-0.005em", lineHeight: 1.15 }}>
               {s.title}
             </h4>
-            <p style={{ color: "var(--ink-soft)", lineHeight: 1.65, fontSize: 10.5 }}>{s.body}</p>
+            <p style={{ color: "var(--ink-soft)", lineHeight: 1.65, fontSize: 12.5 }}>{s.body}</p>
             <div
               style={{
                 fontFamily: '"Mallory", sans-serif',
@@ -96,7 +96,7 @@ export default function Method() {
             href="#"
             style={{
               fontFamily: '"Mallory", sans-serif',
-              fontSize: 7.7,
+              fontSize: 9.7,
               letterSpacing: "0.18em",
               textTransform: "uppercase",
               color: "var(--ink)",

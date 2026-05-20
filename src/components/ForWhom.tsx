@@ -22,7 +22,7 @@ export default function ForWhom() {
               Organizzazioni strutturate del{" "}
               <em style={{ fontStyle: "italic", fontWeight: 400 }}>terzo settore.</em>
             </h2>
-            <p style={{ fontSize: 11.2, lineHeight: 1.65, color: "var(--ink-soft)", maxWidth: 460, marginBottom: 40 }}>
+            <p style={{ fontSize: 13.2, lineHeight: 1.65, color: "var(--ink-soft)", maxWidth: 460, marginBottom: 40 }}>
               Lo studio collabora con organizzazioni del terzo settore strutturate: con una
               mission definita, una governance chiara e l&apos;esigenza di accedere a finanziamenti
               significativi in modo continuativo.
@@ -33,7 +33,7 @@ export default function ForWhom() {
                   key={c.label}
                   style={{
                     fontFamily: '"Mallory", sans-serif',
-                    fontSize: 9.1,
+                    fontSize: 11.1,
                     padding: "8px 16px",
                     borderRadius: 999,
                     color: "var(--ink)",
