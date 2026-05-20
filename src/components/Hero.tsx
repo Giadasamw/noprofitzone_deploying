@@ -89,7 +89,7 @@ export default function Hero() {
             }}
           >
             <Image
-              src="/photo-crosswalk.jpg"
+              src="/photo-hero-group.png"
               alt=""
               fill
               style={{ objectFit: "cover", objectPosition: "center 40%", filter: "grayscale(1) contrast(1.04)" }}
