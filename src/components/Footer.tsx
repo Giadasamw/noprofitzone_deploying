@@ -14,20 +14,20 @@ export default function Footer() {
           <div>
             <div style={{ marginBottom: 18 }}>
               <span
-                style={{
-                  fontFamily: '"Mackinac", Georgia, serif',
-                  fontSize: 36,
-                  fontWeight: 400,
-                  letterSpacing: "-0.01em",
-                  lineHeight: 1,
-                  color: "var(--paper)",
-                  display: "block",
-                  marginBottom: 6,
-                }}
+              style={{
+                fontFamily: '"Mackinac", Georgia, serif',
+                fontSize: 25.2,
+                fontWeight: 400,
+                letterSpacing: "-0.01em",
+                lineHeight: 1,
+                color: "var(--paper)",
+                display: "block",
+                marginBottom: 6,
+              }}
               >
                 No Profit Zone.
               </span>
-              <span style={{ fontFamily: '"Mallory", sans-serif', fontSize: 13, color: "rgba(250,246,236,0.65)" }}>
+              <span style={{ fontFamily: '"Mallory", sans-serif', fontSize: 9.1, color: "rgba(250,246,236,0.65)" }}>
                 Consulting per il terzo settore
               </span>
             </div>
@@ -64,7 +64,7 @@ export default function Footer() {
             justifyContent: "space-between",
             paddingTop: 28,
             fontFamily: '"Mallory", sans-serif',
-            fontSize: 11,
+            fontSize: 7.7,
             letterSpacing: "0.14em",
             textTransform: "uppercase",
             color: "rgba(241,236,225,0.5)",
@@ -80,14 +80,14 @@ export default function Footer() {
 
 const footerText: React.CSSProperties = {
   fontFamily: '"Mallory", sans-serif',
-  fontSize: 14,
+  fontSize: 9.8,
   lineHeight: 1.55,
   color: "var(--paper)",
 };
 
 const footerLabel: React.CSSProperties = {
   fontFamily: '"Mallory", sans-serif',
-  fontSize: 11,
+  fontSize: 7.7,
   letterSpacing: "0.22em",
   textTransform: "uppercase",
   color: "rgba(241,236,225,0.55)",

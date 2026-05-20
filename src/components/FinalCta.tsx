@@ -19,7 +19,7 @@ export default function FinalCta() {
             <p
               style={{
                 fontFamily: '"Mallory", sans-serif',
-                fontSize: 10,
+                fontSize: 7,
                 letterSpacing: "0.24em",
                 textTransform: "uppercase",
                 color: "rgba(26,26,26,0.65)",
@@ -30,7 +30,7 @@ export default function FinalCta() {
             <h2
               style={{
                 fontFamily: '"Mackinac", Georgia, serif',
-                fontSize: "clamp(36px, 4.4vw, 64px)",
+                fontSize: "clamp(25.2px, 3.08vw, 44.8px)",
                 lineHeight: 1.02,
                 letterSpacing: "-0.018em",
                 fontWeight: 700,
@@ -42,7 +42,7 @@ export default function FinalCta() {
               Una prima conversazione, gratuita, di{" "}
               <em style={{ fontStyle: "italic", fontWeight: 400 }}>trenta minuti.</em>
             </h2>
-            <p style={{ fontSize: 15, lineHeight: 1.65, color: "var(--ink-soft)", maxWidth: 480, marginBottom: 48 }}>
+            <p style={{ fontSize: 12.5, lineHeight: 1.65, color: "var(--ink-soft)", maxWidth: 480, marginBottom: 48 }}>
               Nella call conoscitiva chiediamo all&apos;organizzazione di raccontarci la propria
               mission e il bando o il progetto su cui sta valutando di lavorare. Sulla base di
               questa conversazione diciamo se lo studio è in grado di offrire un contributo
@@ -57,14 +57,14 @@ export default function FinalCta() {
                 background: "var(--ink)",
                 color: "var(--paper)",
                 fontFamily: '"Mallory", sans-serif',
-                fontSize: 13,
+                fontSize: 11.1,
                 padding: "14px 24px",
                 borderRadius: 999,
                 border: "1.5px solid var(--ink)",
               }}
             >
               Prenota una call conoscitiva{" "}
-              <span style={{ fontFamily: '"Mackinac", serif', fontSize: 16 }}>→</span>
+              <span style={{ fontFamily: '"Mackinac", serif', fontSize: 11.2 }}>→</span>
             </a>
           </div>
 
@@ -72,14 +72,14 @@ export default function FinalCta() {
             <div
               style={{
                 fontFamily: '"Mallory", sans-serif',
-                fontSize: 11,
+                fontSize: 7.7,
                 letterSpacing: "0.18em",
                 textTransform: "uppercase",
                 color: "rgba(26,26,26,0.7)",
                 textAlign: "right",
               }}
             >
-              <strong style={{ display: "block", color: "var(--ink)", fontSize: 13, marginBottom: 4, letterSpacing: "0.12em" }}>
+              <strong style={{ display: "block", color: "var(--ink)", fontSize: 9.1, marginBottom: 4, letterSpacing: "0.12em" }}>
                 30 minuti
               </strong>
               Online · Google Meet<br />

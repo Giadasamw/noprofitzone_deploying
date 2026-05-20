@@ -1,15 +1,9 @@
-const chips: { label: string; variant: "yellow" | "lilac" | "peach" }[] = [
-  { label: "Fondazioni e organizzazioni filantropiche", variant: "lilac" },
-  { label: "ONG e cooperative sociali medio-grandi", variant: "yellow" },
-  { label: "Enti culturali: musei, festival, residenze", variant: "peach" },
-  { label: "Imprese sociali e realtà ibride profit / non profit", variant: "lilac" },
+const chips: { label: string; borderColor: string }[] = [
+  { label: "Fondazioni e organizzazioni filantropiche", borderColor: "#f5d76a" },
+  { label: "ONG e cooperative sociali medio-grandi", borderColor: "#e0a4e8" },
+  { label: "Enti culturali: musei, festival, residenze", borderColor: "#d9825f" },
+  { label: "Imprese sociali e realtà ibride profit / non profit", borderColor: "#f3a07a" },
 ];
-
-const chipBg: Record<string, string> = {
-  yellow: "var(--accent-yellow)",
-  lilac: "var(--accent-lilac)",
-  peach: "var(--paper-2)",
-};
 
 export default function ForWhom() {
   return (
@@ -22,7 +16,7 @@ export default function ForWhom() {
               Organizzazioni strutturate del{" "}
               <em style={{ fontStyle: "italic", fontWeight: 400 }}>terzo settore.</em>
             </h2>
-            <p style={{ fontSize: 16, lineHeight: 1.65, color: "var(--ink-soft)", maxWidth: 460, marginBottom: 40 }}>
+            <p style={{ fontSize: 13.2, lineHeight: 1.65, color: "var(--ink-soft)", maxWidth: 460, marginBottom: 40 }}>
               Lo studio collabora con organizzazioni del terzo settore strutturate: con una
               mission definita, una governance chiara e l&apos;esigenza di accedere a finanziamenti
               significativi in modo continuativo.
@@ -33,11 +27,12 @@ export default function ForWhom() {
                   key={c.label}
                   style={{
                     fontFamily: '"Mallory", sans-serif',
-                    fontSize: 13,
+                    fontSize: 11.1,
                     padding: "8px 16px",
                     borderRadius: 999,
                     color: "var(--ink)",
-                    background: chipBg[c.variant],
+                    background: "transparent",
+                    border: `1.5px solid ${c.borderColor}`,
                   }}
                 >
                   {c.label}
@@ -65,7 +60,7 @@ export default function ForWhom() {
 
 const monoStyle: React.CSSProperties = {
   fontFamily: '"Mallory", sans-serif',
-  fontSize: 10,
+  fontSize: 7,
   letterSpacing: "0.24em",
   textTransform: "uppercase",
   color: "var(--muted)",
@@ -74,7 +69,7 @@ const monoStyle: React.CSSProperties = {
 
 const h2Style: React.CSSProperties = {
   fontFamily: '"Mackinac", Georgia, serif',
-  fontSize: "clamp(32px, 3.2vw, 48px)",
+  fontSize: "clamp(22.4px, 2.24vw, 33.6px)",
   lineHeight: 1.05,
   letterSpacing: "-0.012em",
   fontWeight: 700,

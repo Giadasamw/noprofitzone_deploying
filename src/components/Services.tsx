@@ -61,20 +61,20 @@ export default function Services() {
                   }}
                 />
               </div>
-              <span style={{ fontFamily: '"Mallory", sans-serif', fontSize: 10, letterSpacing: "0.24em", textTransform: "uppercase", color: "var(--muted)", marginBottom: 18 }}>
+              <span style={{ fontFamily: '"Mallory", sans-serif', fontSize: 7, letterSpacing: "0.24em", textTransform: "uppercase", color: "var(--muted)", marginBottom: 18 }}>
                 {s.number}
               </span>
-              <h3 style={{ fontFamily: '"Mackinac", Georgia, serif', fontSize: 30, lineHeight: 1.1, letterSpacing: "-0.01em", fontWeight: 700, marginBottom: 18 }}>
+              <h3 style={{ fontFamily: '"Mackinac", Georgia, serif', fontSize: 21, lineHeight: 1.1, letterSpacing: "-0.01em", fontWeight: 700, marginBottom: 18 }}>
                 {s.title}
               </h3>
-              <p style={{ color: "var(--ink-soft)", lineHeight: 1.65, fontSize: 15, maxWidth: 440, marginBottom: 28 }}>
+              <p style={{ color: "var(--ink-soft)", lineHeight: 1.65, fontSize: 12.5, maxWidth: 440, marginBottom: 28 }}>
                 {s.body}
               </p>
               <a
                 href="#"
                 style={{
                   fontFamily: '"Mallory", sans-serif',
-                  fontSize: 11,
+                  fontSize: 9.7,
                   letterSpacing: "0.18em",
                   textTransform: "uppercase",
                   color: "var(--ink)",
@@ -98,7 +98,7 @@ export default function Services() {
 
 const monoStyle: React.CSSProperties = {
   fontFamily: '"Mallory", sans-serif',
-  fontSize: 10,
+  fontSize: 7,
   letterSpacing: "0.24em",
   textTransform: "uppercase",
   color: "var(--muted)",
