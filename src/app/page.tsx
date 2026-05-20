@@ -3,7 +3,6 @@ import Hero from "@/components/Hero";
 import Narrative from "@/components/Narrative";
 import Services from "@/components/Services";
 import Method from "@/components/Method";
-import FeatureBleed from "@/components/FeatureBleed";
 import WhyBoutique from "@/components/WhyBoutique";
 import ForWhom from "@/components/ForWhom";
 import About from "@/components/About";
@@ -19,7 +18,6 @@ export default function Home() {
         <Narrative />
         <Services />
         <Method />
-        <FeatureBleed />
         <WhyBoutique />
         <ForWhom />
         <About />
