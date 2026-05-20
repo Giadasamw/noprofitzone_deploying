@@ -21,7 +21,7 @@ export default function Hero() {
                 lineHeight: 1.04,
                 letterSpacing: "-0.018em",
                 fontWeight: 700,
-                maxWidth: "12ch",
+                maxWidth: "20ch",
               }}
             >
               Le idee che meritano di esistere hanno bisogno di{" "}
