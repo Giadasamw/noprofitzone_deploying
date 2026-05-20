@@ -36,6 +36,7 @@ export default function Header() {
                 fontFamily: '"Mallory", sans-serif',
                 fontSize: 12,
                 letterSpacing: "0.04em",
+                textTransform: "uppercase",
                 color: "var(--ink)",
                 position: "relative",
                 ...(i === 0 ? { borderBottom: "1px solid var(--ink)", paddingBottom: 4 } : {}),
