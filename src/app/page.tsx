@@ -5,7 +5,6 @@ import Services from "@/components/Services";
 import Method from "@/components/Method";
 import WhyBoutique from "@/components/WhyBoutique";
 import ForWhom from "@/components/ForWhom";
-import About from "@/components/About";
 import FinalCta from "@/components/FinalCta";
 import Footer from "@/components/Footer";
 
@@ -20,7 +19,6 @@ export default function Home() {
         <Method />
         <WhyBoutique />
         <ForWhom />
-        <About />
         <FinalCta />
       </main>
       <Footer />
