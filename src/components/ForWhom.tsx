@@ -1,15 +1,9 @@
-const chips: { label: string; variant: "yellow" | "lilac" | "peach" }[] = [
-  { label: "Fondazioni e organizzazioni filantropiche", variant: "lilac" },
-  { label: "ONG e cooperative sociali medio-grandi", variant: "yellow" },
-  { label: "Enti culturali: musei, festival, residenze", variant: "peach" },
-  { label: "Imprese sociali e realtà ibride profit / non profit", variant: "lilac" },
+const chips: { label: string; borderColor: string }[] = [
+  { label: "Fondazioni e organizzazioni filantropiche", borderColor: "#f5d76a" },
+  { label: "ONG e cooperative sociali medio-grandi", borderColor: "#e0a4e8" },
+  { label: "Enti culturali: musei, festival, residenze", borderColor: "#d9825f" },
+  { label: "Imprese sociali e realtà ibride profit / non profit", borderColor: "#f3a07a" },
 ];
-
-const chipBg: Record<string, string> = {
-  yellow: "var(--accent-yellow)",
-  lilac: "var(--accent-lilac)",
-  peach: "var(--paper-2)",
-};
 
 export default function ForWhom() {
   return (
@@ -37,7 +31,8 @@ export default function ForWhom() {
                     padding: "8px 16px",
                     borderRadius: 999,
                     color: "var(--ink)",
-                    background: chipBg[c.variant],
+                    background: "transparent",
+                    border: `1.5px solid ${c.borderColor}`,
                   }}
                 >
                   {c.label}
