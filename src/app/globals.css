@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+/* ── Custom fonts ── */
+@font-face {
+  font-family: "Mackinac";
+  src: url("/P22Mackinac-Book.otf") format("opentype");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Mackinac";
+  src: url("/P22Mackinac-BookItalic_5.otf") format("opentype");
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "Mackinac";
+  src: url("/P22MackinacPro-Bold_16.otf") format("opentype");
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Mackinac";
+  src: url("/P22MackinacPro-BoldItalic_11.otf") format("opentype");
+  font-weight: 700; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "Mallory";
+  src: url("/Mallory-Book.ttf") format("truetype");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Mallory";
+  src: url("/Mallory Book Italic.ttf") format("truetype");
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "Mallory";
+  src: url("/Mallory Bold.ttf") format("truetype");
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+
+/* ── Design tokens ── */
+:root {
+  --paper:         #faf6ec;
+  --paper-2:       #f3e0d0;
+  --ink:           #4a4744;
+  --ink-soft:      #5a544d;
+  --muted:         #8a8175;
+  --line:          #e3d9c4;
+  --line-soft:     #ece3d2;
+  --accent:        #cc5a2c;
+  --accent-deep:   #a8451f;
+  --accent-yellow: #f5d76a;
+  --accent-lilac:  #e0a4e8;
+  --gradient: radial-gradient(120% 130% at 70% 30%, #f5d76a 0%, #f3a07a 35%, #e0a4e8 75%, #cdb9e8 100%);
+  --gradient-soft: radial-gradient(120% 130% at 30% 30%, #fbe8b6 0%, #f5c4a8 40%, #e7c0eb 75%, #d9c5e6 100%);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Mallory", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
