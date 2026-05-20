@@ -52,6 +52,7 @@ export default function About() {
                     backgroundPosition: p.pos,
                     filter: "grayscale(1) contrast(1.05)",
                     marginBottom: 16,
+                    borderRadius: 16,
                   }}
                 />
                 <div

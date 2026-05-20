@@ -38,6 +38,7 @@ export default function Services() {
                   marginBottom: 36,
                   position: "relative",
                   overflow: "hidden",
+                  borderRadius: 20,
                 }}
               >
                 <Image
