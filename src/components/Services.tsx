@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 const services = [
@@ -23,11 +25,11 @@ const services = [
 
 export default function Services() {
   return (
-    <section style={{ padding: "100px 0" }}>
-      <div style={{ maxWidth: 1240, margin: "0 auto", padding: "0 72px" }}>
+    <section className="services-section">
+      <div className="services-container">
         <p style={monoStyle}>— Due servizi che lavorano in sequenza</p>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, marginTop: 28 }}>
+        <div className="services-grid">
           {services.map((s, i) => (
             <article key={i} style={{ display: "flex", flexDirection: "column" }}>
               <div
@@ -92,13 +94,44 @@ export default function Services() {
           ))}
         </div>
       </div>
+
+      <style jsx>{`
+        .services-section {
+          padding: 100px 0;
+        }
+        .services-container {
+          max-width: 1240px;
+          margin: 0 auto;
+          padding: 0 72px;
+        }
+        .services-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 80px;
+          margin-top: 28px;
+        }
+        
+        @media (max-width: 768px) {
+          .services-section {
+            padding: 60px 0;
+          }
+          .services-container {
+            padding: 0 24px;
+          }
+          .services-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+          }
+        }
+      `}</style>
     </section>
   );
 }
 
 const monoStyle: React.CSSProperties = {
   fontFamily: '"Mallory", sans-serif',
-  fontSize: 7,
+  fontSize: 11,
   letterSpacing: "0.24em",
   textTransform: "uppercase",
   color: "var(--muted)",

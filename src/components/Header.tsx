@@ -1,6 +1,11 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <header
       style={{
@@ -13,29 +18,35 @@ export default function Header() {
         borderBottom: "1px solid var(--line-soft)",
       }}
     >
-      <div
-        style={{
-          maxWidth: 1240,
-          margin: "0 auto",
-          padding: "24px 72px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-        }}
-      >
+      <div className="header-container">
         <a href="#" aria-label="No Profit Zone">
-          <Image src="/logo-npz.png" alt="No Profit Zone" height={44} width={160} style={{ height: 44, width: "auto" }} />
+          <Image src="/logo-npz.png" alt="No Profit Zone" height={53} width={192} style={{ height: 53, width: "auto" }} className="header-logo" />
         </a>
 
-        <nav style={{ display: "flex", gap: 36 }}>
+        {/* Mobile menu button */}
+        <button
+          className="mobile-menu-btn"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          <span style={{ display: "flex", flexDirection: "column", gap: 5 }}>
+            <span style={{ width: 24, height: 2, background: "var(--ink)", transition: "all 0.3s", transform: menuOpen ? "rotate(45deg) translateY(7px)" : "none" }} />
+            <span style={{ width: 24, height: 2, background: "var(--ink)", transition: "all 0.3s", opacity: menuOpen ? 0 : 1 }} />
+            <span style={{ width: 24, height: 2, background: "var(--ink)", transition: "all 0.3s", transform: menuOpen ? "rotate(-45deg) translateY(-7px)" : "none" }} />
+          </span>
+        </button>
+
+        {/* Desktop nav */}
+        <nav className="desktop-nav">
           {["Home", "Servizi & Metodo", "Chi siamo", "Contatti"].map((item, i) => (
             <a
               key={item}
               href="#"
               style={{
                 fontFamily: '"Mallory", sans-serif',
-                fontSize: 9.1,
+                fontSize: 11,
                 letterSpacing: "0.04em",
+                textTransform: "uppercase",
                 color: "var(--ink)",
                 position: "relative",
                 ...(i === 0 ? { borderBottom: "1px solid var(--ink)", paddingBottom: 4 } : {}),
@@ -48,9 +59,10 @@ export default function Header() {
 
         <a
           href="#"
+          className="desktop-cta"
           style={{
             fontFamily: '"Mallory", sans-serif',
-            fontSize: 8.4,
+            fontSize: 12,
             letterSpacing: "0.06em",
             border: "1.5px solid var(--accent)",
             padding: "12px 22px",
@@ -61,6 +73,103 @@ export default function Header() {
           Prenota una call →
         </a>
       </div>
+
+      {/* Mobile nav overlay */}
+      {menuOpen && (
+        <div className="mobile-nav-overlay">
+          <nav style={{ display: "flex", flexDirection: "column", gap: 24, padding: "32px 24px" }}>
+            {["Home", "Servizi & Metodo", "Chi siamo", "Contatti"].map((item, i) => (
+              <a
+                key={item}
+                href="#"
+                onClick={() => setMenuOpen(false)}
+                style={{
+                  fontFamily: '"Mallory", sans-serif',
+                  fontSize: 14,
+                  letterSpacing: "0.04em",
+                  textTransform: "uppercase",
+                  color: "var(--ink)",
+                  ...(i === 0 ? { borderBottom: "1px solid var(--ink)", paddingBottom: 4, alignSelf: "flex-start" } : {}),
+                }}
+              >
+                {item}
+              </a>
+            ))}
+            <a
+              href="#"
+              style={{
+                fontFamily: '"Mallory", sans-serif',
+                fontSize: 12,
+                letterSpacing: "0.06em",
+                border: "1.5px solid var(--accent)",
+                padding: "14px 24px",
+                borderRadius: 999,
+                color: "var(--accent)",
+                textAlign: "center",
+                marginTop: 16,
+              }}
+            >
+              Prenota una call →
+            </a>
+          </nav>
+        </div>
+      )}
+
+      <style jsx>{`
+        .header-container {
+          max-width: 1240px;
+          margin: 0 auto;
+          padding: 24px 72px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .mobile-menu-btn {
+          display: none;
+          background: none;
+          border: none;
+          cursor: pointer;
+          padding: 8px;
+        }
+        .desktop-nav {
+          display: flex;
+          gap: 36px;
+        }
+        .desktop-cta {
+          display: block;
+        }
+        .mobile-nav-overlay {
+          display: none;
+        }
+        
+        @media (max-width: 768px) {
+          .header-container {
+            padding: 16px 24px;
+          }
+          .header-logo {
+            height: 40px !important;
+          }
+          .mobile-menu-btn {
+            display: block;
+          }
+          .desktop-nav {
+            display: none;
+          }
+          .desktop-cta {
+            display: none;
+          }
+          .mobile-nav-overlay {
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: var(--paper);
+            border-bottom: 1px solid var(--line-soft);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+          }
+        }
+      `}</style>
     </header>
   );
 }
