@@ -1,7 +1,5 @@
 import Image from "next/image";
 
-const gradient = "radial-gradient(120% 130% at 70% 30%, #f5d76a 0%, #f3a07a 35%, #e0a4e8 75%, #cdb9e8 100%)";
-
 export default function Hero() {
   return (
     <section style={{ padding: "80px 0 160px", position: "relative" }}>
@@ -92,18 +90,6 @@ export default function Hero() {
               alt=""
               fill
               style={{ objectFit: "cover", objectPosition: "center 40%", filter: "grayscale(1) contrast(1.04)" }}
-            />
-            <div
-              style={{
-                position: "absolute",
-                right: 24,
-                top: 24,
-                width: 72,
-                height: 72,
-                borderRadius: "50%",
-                background: gradient,
-                boxShadow: "0 0 24px rgba(217,130,95,.45)",
-              }}
             />
           </div>
         </div>
