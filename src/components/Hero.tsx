@@ -49,8 +49,7 @@ export default function Hero() {
                 flexDirection: "column",
                 alignItems: "flex-start",
                 gap: 16,
-                marginTop: "auto",
-                paddingTop: 64,
+                marginTop: 48,
               }}
             >
               <a href="#" style={pillStyle("filled")}>
@@ -60,45 +59,13 @@ export default function Hero() {
                 Scopri il metodo <span style={{ fontFamily: '"Mackinac", serif', fontSize: 11.2 }}>→</span>
               </a>
             </div>
-          </div>
-
-          {/* Right */}
-          <div style={{ display: "flex", flexDirection: "column", gap: 40 }}>
-            <div
-              style={{
-                position: "relative",
-                width: "100%",
-                aspectRatio: "3/4",
-                borderRadius: "999px 999px 4px 4px",
-                overflow: "hidden",
-                background: "var(--paper-2)",
-              }}
-            >
-              <Image
-                src="/photo-crosswalk.jpg"
-                alt=""
-                fill
-                style={{ objectFit: "cover", objectPosition: "center 40%", filter: "grayscale(1) contrast(1.04)" }}
-              />
-              <div
-                style={{
-                  position: "absolute",
-                  right: 24,
-                  top: 24,
-                  width: 72,
-                  height: 72,
-                  borderRadius: "50%",
-                  background: gradient,
-                  boxShadow: "0 0 24px rgba(217,130,95,.45)",
-                }}
-              />
-            </div>
 
             <div
               style={{
                 border: "1.5px solid var(--ink)",
                 borderRadius: 28,
                 padding: "28px 32px",
+                marginTop: 48,
               }}
             >
               <p style={{ fontSize: 9.8, lineHeight: 1.6, color: "var(--ink)" }}>
@@ -107,6 +74,37 @@ export default function Hero() {
                 rendicontazione dei progetti — perché l&apos;attraversamento sia più breve.
               </p>
             </div>
+          </div>
+
+          {/* Right */}
+          <div
+            style={{
+              position: "relative",
+              width: "100%",
+              aspectRatio: "3/4",
+              borderRadius: "999px 999px 4px 4px",
+              overflow: "hidden",
+              background: "var(--paper-2)",
+            }}
+          >
+            <Image
+              src="/photo-crosswalk.jpg"
+              alt=""
+              fill
+              style={{ objectFit: "cover", objectPosition: "center 40%", filter: "grayscale(1) contrast(1.04)" }}
+            />
+            <div
+              style={{
+                position: "absolute",
+                right: 24,
+                top: 24,
+                width: 72,
+                height: 72,
+                borderRadius: "50%",
+                background: gradient,
+                boxShadow: "0 0 24px rgba(217,130,95,.45)",
+              }}
+            />
           </div>
         </div>
       </div>
