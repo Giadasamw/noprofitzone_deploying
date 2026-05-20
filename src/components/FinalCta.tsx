@@ -5,7 +5,7 @@ export default function FinalCta() {
         <div
           style={{
             background: "radial-gradient(120% 130% at 70% 30%, #f5d76a 0%, #f3a07a 35%, #e0a4e8 75%, #cdb9e8 100%)",
-            borderRadius: 4,
+            borderRadius: 24,
             padding: "120px 96px",
             position: "relative",
             overflow: "hidden",

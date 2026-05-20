@@ -3,13 +3,16 @@ export default function FeatureBleed() {
     <section style={{ position: "relative", padding: "80px 0" }}>
       <div
         style={{
-          width: "100%",
+          width: "calc(100% - 144px)",
+          margin: "0 auto",
           aspectRatio: "21/8",
           backgroundImage: "url('/photo-running.png')",
           backgroundSize: "cover",
           backgroundPosition: "center 30%",
           filter: "grayscale(1) contrast(1.06)",
           position: "relative",
+          borderRadius: 24,
+          overflow: "hidden",
         }}
         role="img"
         aria-label="Persone che corrono"

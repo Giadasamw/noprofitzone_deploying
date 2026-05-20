@@ -53,6 +53,7 @@ export default function ForWhom() {
               backgroundSize: "cover",
               backgroundPosition: "center",
               filter: "grayscale(1) contrast(1.05)",
+              borderRadius: 20,
             }}
             aria-hidden="true"
           />
