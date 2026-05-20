@@ -68,3 +68,25 @@ html, body {
 }
 
 a { color: inherit; text-decoration: none; }
+
+/* ── Mobile responsive utilities ── */
+@media (max-width: 768px) {
+  .mobile-padding {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+  
+  .mobile-stack {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  
+  .mobile-hidden {
+    display: none !important;
+  }
+  
+  .mobile-full-width {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}

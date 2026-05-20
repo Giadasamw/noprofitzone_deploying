@@ -7,9 +7,9 @@ const chips: { label: string; borderColor: string }[] = [
 
 export default function ForWhom() {
   return (
-    <section style={{ padding: "140px 0", borderTop: "1px solid var(--line)" }}>
-      <div style={{ maxWidth: 1240, margin: "0 auto", padding: "0 72px" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: 120, alignItems: "center" }}>
+    <section className="forwhom-section">
+      <div className="forwhom-container">
+        <div className="forwhom-grid">
           <div>
             <p style={monoStyle}>— Per chi lavoriamo</p>
             <h2 style={h2Style}>
@@ -42,8 +42,8 @@ export default function ForWhom() {
           </div>
 
           <div
+            className="forwhom-image"
             style={{
-              aspectRatio: "4/5",
               backgroundImage: "url('/photo-bags.png')",
               backgroundSize: "cover",
               backgroundPosition: "center",
@@ -54,6 +54,46 @@ export default function ForWhom() {
           />
         </div>
       </div>
+
+      <style jsx>{`
+        .forwhom-section {
+          padding: 140px 0;
+          border-top: 1px solid var(--line);
+        }
+        .forwhom-container {
+          max-width: 1240px;
+          margin: 0 auto;
+          padding: 0 72px;
+        }
+        .forwhom-grid {
+          display: grid;
+          grid-template-columns: 1.2fr 1fr;
+          gap: 120px;
+          align-items: center;
+        }
+        .forwhom-image {
+          aspect-ratio: 4/5;
+        }
+        
+        @media (max-width: 768px) {
+          .forwhom-section {
+            padding: 60px 0;
+          }
+          .forwhom-container {
+            padding: 0 24px;
+          }
+          .forwhom-grid {
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 40px;
+          }
+          .forwhom-image {
+            width: 100%;
+            aspect-ratio: 4/3;
+            border-radius: 16px;
+          }
+        }
+      `}</style>
     </section>
   );
 }

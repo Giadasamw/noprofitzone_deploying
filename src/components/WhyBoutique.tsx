@@ -1,7 +1,7 @@
 export default function WhyBoutique() {
   return (
-    <section style={{ padding: "160px 0" }}>
-      <div style={{ maxWidth: 1240, margin: "0 auto", padding: "0 72px" }}>
+    <section className="why-section">
+      <div className="why-container">
         <div style={{ marginBottom: 80, maxWidth: 720 }}>
           <p style={monoStyle}>— Lo studio</p>
           <h2 style={h2Style}>
@@ -21,6 +21,26 @@ export default function WhyBoutique() {
           ))}
         </div>
       </div>
+
+      <style jsx>{`
+        .why-section {
+          padding: 160px 0;
+        }
+        .why-container {
+          max-width: 1240px;
+          margin: 0 auto;
+          padding: 0 72px;
+        }
+        
+        @media (max-width: 768px) {
+          .why-section {
+            padding: 60px 0;
+          }
+          .why-container {
+            padding: 0 24px;
+          }
+        }
+      `}</style>
     </section>
   );
 }

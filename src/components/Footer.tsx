@@ -1,16 +1,8 @@
 export default function Footer() {
   return (
-    <footer style={{ background: "var(--ink)", color: "var(--paper)", padding: "80px 0 32px" }}>
-      <div style={{ maxWidth: 1240, margin: "0 auto", padding: "0 72px" }}>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1.6fr 1fr 1fr 1fr",
-            gap: 56,
-            paddingBottom: 64,
-            borderBottom: "1px solid rgba(241,236,225,0.18)",
-          }}
-        >
+    <footer className="footer">
+      <div className="footer-container">
+        <div className="footer-grid">
           <div>
             <div style={{ marginBottom: 18 }}>
               <span
@@ -58,22 +50,61 @@ export default function Footer() {
           </div>
         </div>
 
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            paddingTop: 28,
-            fontFamily: '"Mallory", sans-serif',
-            fontSize: 7.7,
-            letterSpacing: "0.14em",
-            textTransform: "uppercase",
-            color: "rgba(241,236,225,0.5)",
-          }}
-        >
+        <div className="footer-bottom">
           <span>© 2026 No Profit Zone — Un progetto di Allarà Nicoletta</span>
           <span>Milano · Italia</span>
         </div>
       </div>
+
+      <style jsx>{`
+        .footer {
+          background: var(--ink);
+          color: var(--paper);
+          padding: 80px 0 32px;
+        }
+        .footer-container {
+          max-width: 1240px;
+          margin: 0 auto;
+          padding: 0 72px;
+        }
+        .footer-grid {
+          display: grid;
+          grid-template-columns: 1.6fr 1fr 1fr 1fr;
+          gap: 56px;
+          padding-bottom: 64px;
+          border-bottom: 1px solid rgba(241,236,225,0.18);
+        }
+        .footer-bottom {
+          display: flex;
+          justify-content: space-between;
+          padding-top: 28px;
+          font-family: "Mallory", sans-serif;
+          font-size: 7.7px;
+          letter-spacing: 0.14em;
+          text-transform: uppercase;
+          color: rgba(241,236,225,0.5);
+        }
+        
+        @media (max-width: 768px) {
+          .footer {
+            padding: 48px 0 24px;
+          }
+          .footer-container {
+            padding: 0 24px;
+          }
+          .footer-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            padding-bottom: 40px;
+          }
+          .footer-bottom {
+            flex-direction: column;
+            gap: 8px;
+            text-align: center;
+          }
+        }
+      `}</style>
     </footer>
   );
 }

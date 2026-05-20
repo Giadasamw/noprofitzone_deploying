@@ -27,9 +27,9 @@ const steps = [
 
 export default function Method() {
   return (
-    <section style={{ padding: "160px 0 140px", borderTop: "1px solid var(--line)" }}>
-      <div style={{ maxWidth: 1240, margin: "0 auto", padding: "0 72px" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 120, marginBottom: 96, alignItems: "end" }}>
+    <section className="method-section">
+      <div className="method-container">
+        <div className="method-header">
           <h2
             style={{
               fontFamily: '"Mackinac", Georgia, serif',
@@ -41,7 +41,7 @@ export default function Method() {
           >
             Il metodo in <em style={{ fontStyle: "italic", fontWeight: 400 }}>quattro fasi.</em>
           </h2>
-          <p style={{ fontSize: 12.5, lineHeight: 1.65, color: "var(--ink-soft)", maxWidth: 460 }}>
+          <p className="method-intro">
             Ogni progetto segue lo stesso percorso, dalla prima analisi alla chiusura. Le due
             partner dello studio seguono direttamente tutte le fasi, senza passaggi a
             collaboratori junior o consulenti esterni.
@@ -51,39 +51,33 @@ export default function Method() {
         {steps.map((s, i) => (
           <div
             key={i}
+            className="method-step"
             style={{
-              display: "grid",
-              gridTemplateColumns: "120px 1.1fr 1.6fr 0.7fr",
-              gap: 56,
-              padding: "48px 0",
               borderTop: "1px solid var(--line)",
               ...(i === steps.length - 1 ? { borderBottom: "1px solid var(--line)" } : {}),
-              alignItems: "center",
             }}
           >
             <div
+              className="step-number"
               style={{
                 fontFamily: '"Mackinac", serif',
                 fontStyle: "italic",
-                fontSize: 61.6,
-                lineHeight: 0.85,
                 color: "var(--accent)",
               }}
             >
               {s.num}
             </div>
-            <h4 style={{ fontFamily: '"Mackinac", Georgia, serif', fontSize: 15.4, fontWeight: 700, letterSpacing: "-0.005em", lineHeight: 1.15 }}>
+            <h4 className="step-title" style={{ fontFamily: '"Mackinac", Georgia, serif', fontWeight: 700, letterSpacing: "-0.005em", lineHeight: 1.15 }}>
               {s.title}
             </h4>
-            <p style={{ color: "var(--ink-soft)", lineHeight: 1.65, fontSize: 12.5 }}>{s.body}</p>
+            <p className="step-body" style={{ color: "var(--ink-soft)", lineHeight: 1.65 }}>{s.body}</p>
             <div
+              className="step-tag"
               style={{
                 fontFamily: '"Mallory", sans-serif',
-                fontSize: 11,
                 letterSpacing: "0.22em",
                 textTransform: "uppercase",
                 color: "var(--muted)",
-                textAlign: "right",
               }}
             >
               {s.tag}
@@ -110,6 +104,92 @@ export default function Method() {
           </a>
         </p>
       </div>
+
+      <style jsx>{`
+        .method-section {
+          padding: 160px 0 140px;
+          border-top: 1px solid var(--line);
+        }
+        .method-container {
+          max-width: 1240px;
+          margin: 0 auto;
+          padding: 0 72px;
+        }
+        .method-header {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 120px;
+          margin-bottom: 96px;
+          align-items: end;
+        }
+        .method-intro {
+          font-size: 12.5px;
+          line-height: 1.65;
+          color: var(--ink-soft);
+          max-width: 460px;
+        }
+        .method-step {
+          display: grid;
+          grid-template-columns: 120px 1.1fr 1.6fr 0.7fr;
+          gap: 56px;
+          padding: 48px 0;
+          align-items: center;
+        }
+        .step-number {
+          font-size: 61.6px;
+          line-height: 0.85;
+        }
+        .step-title {
+          font-size: 15.4px;
+        }
+        .step-body {
+          font-size: 12.5px;
+        }
+        .step-tag {
+          font-size: 11px;
+          text-align: right;
+        }
+        
+        @media (max-width: 768px) {
+          .method-section {
+            padding: 60px 0;
+          }
+          .method-container {
+            padding: 0 24px;
+          }
+          .method-header {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin-bottom: 48px;
+            align-items: flex-start;
+          }
+          .method-intro {
+            max-width: 100%;
+          }
+          .method-step {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding: 32px 0;
+            align-items: flex-start;
+          }
+          .step-number {
+            font-size: 48px;
+          }
+          .step-title {
+            font-size: 18px;
+          }
+          .step-body {
+            font-size: 13px;
+          }
+          .step-tag {
+            font-size: 10px;
+            text-align: left;
+            margin-top: 8px;
+          }
+        }
+      `}</style>
     </section>
   );
 }

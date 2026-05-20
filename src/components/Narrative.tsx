@@ -1,8 +1,8 @@
 export default function Narrative() {
   return (
-    <section style={{ padding: "140px 0 120px", borderTop: "1px solid var(--line)" }}>
-      <div style={{ maxWidth: 1240, margin: "0 auto", padding: "0 72px" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: 120 }}>
+    <section className="narrative-section">
+      <div className="narrative-container">
+        <div className="narrative-grid">
           <div>
             <p style={monoStyle}>— Il punto di partenza</p>
             <h2 style={h2Style}>
@@ -42,6 +42,37 @@ export default function Narrative() {
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        .narrative-section {
+          padding: 140px 0 120px;
+          border-top: 1px solid var(--line);
+        }
+        .narrative-container {
+          max-width: 1240px;
+          margin: 0 auto;
+          padding: 0 72px;
+        }
+        .narrative-grid {
+          display: grid;
+          grid-template-columns: 1fr 2fr;
+          gap: 120px;
+        }
+        
+        @media (max-width: 768px) {
+          .narrative-section {
+            padding: 60px 0;
+          }
+          .narrative-container {
+            padding: 0 24px;
+          }
+          .narrative-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+          }
+        }
+      `}</style>
     </section>
   );
 }
