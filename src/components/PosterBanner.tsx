@@ -4,9 +4,17 @@ export default function PosterBanner() {
   return (
     <section className="poster-section">
       <div className="poster-container">
-        <div className="poster-image">
+        <div className="poster-image desktop-image">
           <Image
             src="/banner-child.png"
+            alt="No Profit Zone - bambino che ride"
+            fill
+            style={{ objectFit: "cover", objectPosition: "center" }}
+          />
+        </div>
+        <div className="poster-image mobile-image">
+          <Image
+            src="/banner-child-mobile.png"
             alt="No Profit Zone - bambino che ride"
             fill
             style={{ objectFit: "cover", objectPosition: "center" }}
@@ -28,9 +36,16 @@ export default function PosterBanner() {
         .poster-image {
           position: relative;
           width: 100%;
-          aspect-ratio: 16/9;
           border-radius: 24px;
           overflow: hidden;
+        }
+        .desktop-image {
+          display: block;
+          aspect-ratio: 16/9;
+        }
+        .mobile-image {
+          display: none;
+          aspect-ratio: 2/3;
         }
         
         @media (max-width: 768px) {
@@ -42,7 +57,12 @@ export default function PosterBanner() {
           }
           .poster-image {
             border-radius: 16px;
-            aspect-ratio: 4/3;
+          }
+          .desktop-image {
+            display: none;
+          }
+          .mobile-image {
+            display: block;
           }
         }
       `}</style>
