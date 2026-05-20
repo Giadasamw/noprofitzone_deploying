@@ -1,3 +1,5 @@
+"use client";
+
 export default function Narrative() {
   return (
     <section className="narrative-section">

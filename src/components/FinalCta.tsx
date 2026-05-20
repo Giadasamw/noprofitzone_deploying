@@ -1,3 +1,5 @@
+"use client";
+
 export default function FinalCta() {
   return (
     <section className="cta-section">

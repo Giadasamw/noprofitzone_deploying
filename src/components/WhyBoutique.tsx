@@ -1,3 +1,5 @@
+"use client";
+
 export default function WhyBoutique() {
   return (
     <section className="why-section">

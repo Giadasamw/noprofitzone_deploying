@@ -1,3 +1,5 @@
+"use client";
+
 const chips: { label: string; borderColor: string }[] = [
   { label: "Fondazioni e organizzazioni filantropiche", borderColor: "#f5d76a" },
   { label: "ONG e cooperative sociali medio-grandi", borderColor: "#e0a4e8" },
