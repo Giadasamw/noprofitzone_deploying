@@ -58,7 +58,7 @@ export default function Method() {
               padding: "48px 0",
               borderTop: "1px solid var(--line)",
               ...(i === steps.length - 1 ? { borderBottom: "1px solid var(--line)" } : {}),
-              alignItems: "start",
+              alignItems: "center",
             }}
           >
             <div
