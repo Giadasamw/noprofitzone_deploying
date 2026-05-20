@@ -22,7 +22,7 @@ export default function ForWhom() {
               Organizzazioni strutturate del{" "}
               <em style={{ fontStyle: "italic", fontWeight: 400 }}>terzo settore.</em>
             </h2>
-            <p style={{ fontSize: 16, lineHeight: 1.65, color: "var(--ink-soft)", maxWidth: 460, marginBottom: 40 }}>
+            <p style={{ fontSize: 11.2, lineHeight: 1.65, color: "var(--ink-soft)", maxWidth: 460, marginBottom: 40 }}>
               Lo studio collabora con organizzazioni del terzo settore strutturate: con una
               mission definita, una governance chiara e l&apos;esigenza di accedere a finanziamenti
               significativi in modo continuativo.
@@ -33,7 +33,7 @@ export default function ForWhom() {
                   key={c.label}
                   style={{
                     fontFamily: '"Mallory", sans-serif',
-                    fontSize: 13,
+                    fontSize: 9.1,
                     padding: "8px 16px",
                     borderRadius: 999,
                     color: "var(--ink)",
@@ -65,7 +65,7 @@ export default function ForWhom() {
 
 const monoStyle: React.CSSProperties = {
   fontFamily: '"Mallory", sans-serif',
-  fontSize: 10,
+  fontSize: 7,
   letterSpacing: "0.24em",
   textTransform: "uppercase",
   color: "var(--muted)",
@@ -74,7 +74,7 @@ const monoStyle: React.CSSProperties = {
 
 const h2Style: React.CSSProperties = {
   fontFamily: '"Mackinac", Georgia, serif',
-  fontSize: "clamp(32px, 3.2vw, 48px)",
+  fontSize: "clamp(22.4px, 2.24vw, 33.6px)",
   lineHeight: 1.05,
   letterSpacing: "-0.012em",
   fontWeight: 700,

@@ -34,7 +34,7 @@ export default function Header() {
               href="#"
               style={{
                 fontFamily: '"Mallory", sans-serif',
-                fontSize: 13,
+                fontSize: 9.1,
                 letterSpacing: "0.04em",
                 color: "var(--ink)",
                 position: "relative",
@@ -50,7 +50,7 @@ export default function Header() {
           href="#"
           style={{
             fontFamily: '"Mallory", sans-serif',
-            fontSize: 12,
+            fontSize: 8.4,
             letterSpacing: "0.06em",
             border: "1.5px solid var(--accent)",
             padding: "12px 22px",

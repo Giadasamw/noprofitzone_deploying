@@ -33,7 +33,7 @@ export default function Method() {
           <h2
             style={{
               fontFamily: '"Mackinac", Georgia, serif',
-              fontSize: "clamp(32px, 3.2vw, 48px)",
+              fontSize: "clamp(22.4px, 2.24vw, 33.6px)",
               lineHeight: 1.05,
               letterSpacing: "-0.012em",
               fontWeight: 700,
@@ -41,7 +41,7 @@ export default function Method() {
           >
             Il metodo in <em style={{ fontStyle: "italic", fontWeight: 400 }}>quattro fasi.</em>
           </h2>
-          <p style={{ fontSize: 15, lineHeight: 1.65, color: "var(--ink-soft)", maxWidth: 460 }}>
+          <p style={{ fontSize: 10.5, lineHeight: 1.65, color: "var(--ink-soft)", maxWidth: 460 }}>
             Ogni progetto segue lo stesso percorso, dalla prima analisi alla chiusura. Le due
             partner dello studio seguono direttamente tutte le fasi, senza passaggi a
             collaboratori junior o consulenti esterni.
@@ -65,21 +65,21 @@ export default function Method() {
               style={{
                 fontFamily: '"Mackinac", serif',
                 fontStyle: "italic",
-                fontSize: 88,
+                fontSize: 61.6,
                 lineHeight: 0.85,
                 color: "var(--accent)",
               }}
             >
               {s.num}
             </div>
-            <h4 style={{ fontFamily: '"Mackinac", Georgia, serif', fontSize: 22, fontWeight: 700, letterSpacing: "-0.005em", lineHeight: 1.15 }}>
+            <h4 style={{ fontFamily: '"Mackinac", Georgia, serif', fontSize: 15.4, fontWeight: 700, letterSpacing: "-0.005em", lineHeight: 1.15 }}>
               {s.title}
             </h4>
-            <p style={{ color: "var(--ink-soft)", lineHeight: 1.65, fontSize: 15 }}>{s.body}</p>
+            <p style={{ color: "var(--ink-soft)", lineHeight: 1.65, fontSize: 10.5 }}>{s.body}</p>
             <div
               style={{
                 fontFamily: '"Mallory", sans-serif',
-                fontSize: 10,
+                fontSize: 7,
                 letterSpacing: "0.22em",
                 textTransform: "uppercase",
                 color: "var(--muted)",
@@ -96,7 +96,7 @@ export default function Method() {
             href="#"
             style={{
               fontFamily: '"Mallory", sans-serif',
-              fontSize: 11,
+              fontSize: 7.7,
               letterSpacing: "0.18em",
               textTransform: "uppercase",
               color: "var(--ink)",

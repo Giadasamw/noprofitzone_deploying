@@ -19,7 +19,7 @@ export default function Hero() {
             <h1
               style={{
                 fontFamily: '"Mackinac", "Iowan Old Style", Georgia, serif',
-                fontSize: "clamp(48px, 5.2vw, 72px)",
+                fontSize: "clamp(33.6px, 3.64vw, 50.4px)",
                 lineHeight: 1.04,
                 letterSpacing: "-0.018em",
                 fontWeight: 700,
@@ -32,7 +32,7 @@ export default function Hero() {
 
             <p
               style={{
-                fontSize: 14,
+                fontSize: 9.8,
                 lineHeight: 1.55,
                 color: "var(--ink-soft)",
                 maxWidth: 320,
@@ -54,10 +54,10 @@ export default function Hero() {
               }}
             >
               <a href="#" style={pillStyle("filled")}>
-                Prenota una call conoscitiva <span style={{ fontFamily: '"Mackinac", serif', fontSize: 16 }}>→</span>
+                Prenota una call conoscitiva <span style={{ fontFamily: '"Mackinac", serif', fontSize: 11.2 }}>→</span>
               </a>
               <a href="#" style={pillStyle("ghost")}>
-                Scopri il metodo <span style={{ fontFamily: '"Mackinac", serif', fontSize: 16 }}>→</span>
+                Scopri il metodo <span style={{ fontFamily: '"Mackinac", serif', fontSize: 11.2 }}>→</span>
               </a>
             </div>
           </div>
@@ -101,7 +101,7 @@ export default function Hero() {
                 padding: "28px 32px",
               }}
             >
-              <p style={{ fontSize: 14, lineHeight: 1.6, color: "var(--ink)" }}>
+              <p style={{ fontSize: 9.8, lineHeight: 1.6, color: "var(--ink)" }}>
                 No Profit Zone è uno studio di consulenza per il terzo settore. Lavoriamo con
                 fondazioni, ONG ed enti culturali sulla scrittura dei bandi e sulla
                 rendicontazione dei progetti — perché l&apos;attraversamento sia più breve.
@@ -121,7 +121,7 @@ function pillStyle(variant: "filled" | "ghost"): React.CSSProperties {
     gap: 10,
     justifyContent: "space-between",
     fontFamily: '"Mallory", sans-serif',
-    fontSize: 13,
+    fontSize: 9.1,
     letterSpacing: "0.01em",
     padding: "18px 36px",
     borderRadius: 999,

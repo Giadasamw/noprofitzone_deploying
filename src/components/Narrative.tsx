@@ -16,7 +16,7 @@ export default function Narrative() {
                 style={{
                   fontFamily: '"Mackinac", serif',
                   fontStyle: "italic",
-                  fontSize: 48,
+                  fontSize: 33.6,
                   float: "left",
                   lineHeight: 0.9,
                   padding: "6px 12px 0 0",
@@ -48,7 +48,7 @@ export default function Narrative() {
 
 const monoStyle: React.CSSProperties = {
   fontFamily: '"Mallory", sans-serif',
-  fontSize: 10,
+  fontSize: 7,
   letterSpacing: "0.24em",
   textTransform: "uppercase",
   color: "var(--muted)",
@@ -57,14 +57,14 @@ const monoStyle: React.CSSProperties = {
 
 const h2Style: React.CSSProperties = {
   fontFamily: '"Mackinac", Georgia, serif',
-  fontSize: "clamp(28px, 2.8vw, 40px)",
+  fontSize: "clamp(19.6px, 1.96vw, 28px)",
   lineHeight: 1.08,
   letterSpacing: "-0.012em",
   fontWeight: 700,
 };
 
 const paraStyle: React.CSSProperties = {
-  fontSize: 16,
+  fontSize: 11.2,
   lineHeight: 1.65,
   marginBottom: 22,
   maxWidth: 580,
