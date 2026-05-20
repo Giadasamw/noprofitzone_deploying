@@ -79,7 +79,7 @@ export default function Method() {
             <div
               style={{
                 fontFamily: '"Mallory", sans-serif',
-                fontSize: 7,
+                fontSize: 11,
                 letterSpacing: "0.22em",
                 textTransform: "uppercase",
                 color: "var(--muted)",

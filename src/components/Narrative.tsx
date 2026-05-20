@@ -48,7 +48,7 @@ export default function Narrative() {
 
 const monoStyle: React.CSSProperties = {
   fontFamily: '"Mallory", sans-serif',
-  fontSize: 7,
+  fontSize: 11,
   letterSpacing: "0.24em",
   textTransform: "uppercase",
   color: "var(--muted)",

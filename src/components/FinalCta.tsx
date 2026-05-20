@@ -19,7 +19,7 @@ export default function FinalCta() {
             <p
               style={{
                 fontFamily: '"Mallory", sans-serif',
-                fontSize: 7,
+                fontSize: 11,
                 letterSpacing: "0.24em",
                 textTransform: "uppercase",
                 color: "rgba(26,26,26,0.65)",
