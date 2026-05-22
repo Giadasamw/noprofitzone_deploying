@@ -36,14 +36,13 @@ export default function ServiziService1() {
 
             <div className="service-subsection">
               <h3 className="subsection-title">Cosa include il servizio</h3>
-              <ul className="service-list">
+              <div className="service-tags-wrapper">
                 {serviceItems.map((item, i) => (
-                  <li key={i} className="service-list-item">
-                    <span className="list-dash">–</span>
+                  <span key={i} className="service-tag">
                     {item}
-                  </li>
+                  </span>
                 ))}
-              </ul>
+              </div>
             </div>
 
             <div className="service-subsection">
@@ -128,23 +127,21 @@ export default function ServiziService1() {
           letter-spacing: -0.005em;
           margin-bottom: 20px;
         }
-        .service-list {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-        }
-        .service-list-item {
+        .service-tags-wrapper {
           display: flex;
-          align-items: flex-start;
+          flex-wrap: wrap;
           gap: 12px;
-          font-size: 12.5px;
-          line-height: 1.65;
-          color: var(--ink-soft);
-          margin-bottom: 10px;
+          align-items: flex-start;
         }
-        .list-dash {
-          color: var(--accent);
-          flex-shrink: 0;
+        .service-tag {
+          padding: 8px 16px;
+          border: 1px solid var(--accent);
+          border-radius: 4px;
+          font-size: 12.5px;
+          line-height: 1.5;
+          color: var(--ink-soft);
+          white-space: normal;
+          flex: 0 1 auto;
         }
         .service-image-wrapper {
           position: relative;
