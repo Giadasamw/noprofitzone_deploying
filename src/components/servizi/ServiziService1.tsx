@@ -17,6 +17,7 @@ export default function ServiziService1() {
     <section className="service-section">
       <div className="service-container">
         <div className="service-grid">
+          {/* LEFT COLUMN */}
           <div className="service-content">
             <span className="service-label">SERVIZIO 1</span>
             <h2 className="service-title">
@@ -44,8 +45,11 @@ export default function ServiziService1() {
                 ))}
               </div>
             </div>
+          </div>
 
-            <div className="service-subsection">
+          {/* RIGHT COLUMN */}
+          <div className="service-right">
+            <div className="outcome-box">
               <h3 className="subsection-title">Cosa cambia per l&apos;organizzazione</h3>
               <p className="service-body">
                 Una maggiore probabilità di ottenere il finanziamento; la riduzione del
@@ -54,16 +58,16 @@ export default function ServiziService1() {
                 che internamente si dà per scontato.
               </p>
             </div>
-          </div>
 
-          <div className="service-image-wrapper">
-            <Image
-              src="/photo-studio.png"
-              alt=""
-              fill
-              style={{ objectFit: "cover", objectPosition: "center", filter: "grayscale(1) contrast(1.04)" }}
-            />
-            <div className="service-image-accent" />
+            <div className="service-image-wrapper">
+              <Image
+                src="/photo-studio.png"
+                alt=""
+                fill
+                style={{ objectFit: "cover", objectPosition: "center", filter: "grayscale(1) contrast(1.04)" }}
+              />
+              <div className="service-image-accent" />
+            </div>
           </div>
         </div>
       </div>
@@ -136,20 +140,36 @@ export default function ServiziService1() {
         .service-tag {
           padding: 8px 16px;
           border: 1px solid var(--accent);
-          border-radius: 4px;
+          border-radius: 20px;
           font-size: 12.5px;
           line-height: 1.5;
           color: var(--ink-soft);
           white-space: normal;
           flex: 0 1 auto;
         }
+        .service-right {
+          display: flex;
+          flex-direction: column;
+          gap: 32px;
+        }
+        .outcome-box {
+          border: 1px solid var(--line);
+          border-radius: 16px;
+          padding: 32px;
+        }
+        .outcome-box .subsection-title {
+          margin-top: 0;
+        }
+        .outcome-box .service-body {
+          margin-bottom: 0;
+        }
         .service-image-wrapper {
           position: relative;
           width: 100%;
-          aspect-ratio: 3/4;
+          aspect-ratio: 4/3;
           overflow: hidden;
           background: var(--paper-2);
-          border-radius: 20px;
+          border-radius: 16px;
         }
         .service-image-accent {
           position: absolute;
@@ -171,7 +191,7 @@ export default function ServiziService1() {
           }
           .service-grid {
             display: flex;
-            flex-direction: column-reverse;
+            flex-direction: column;
             gap: 40px;
           }
           .service-title {
@@ -186,6 +206,12 @@ export default function ServiziService1() {
           }
           .service-subsection {
             margin-top: 32px;
+          }
+          .service-right {
+            order: -1;
+          }
+          .outcome-box {
+            padding: 24px;
           }
         }
       `}</style>
