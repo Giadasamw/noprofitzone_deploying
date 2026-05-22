@@ -4,8 +4,8 @@ import Image from "next/image";
 
 const serviceItems = [
   "Monitoraggio delle spese e degli avanzamenti",
-  "Predisposizione della rendicontazione tecnica (cosa è stato fatto)",
-  "Predisposizione della rendicontazione economica (come sono stati spesi i fondi)",
+  "Predisposizione della rendicontazione tecnica",
+  "Predisposizione della rendicontazione economica",
   "Verifica della coerenza con i criteri dell'ente finanziatore",
   "Redazione delle relazioni intermedie e finali",
   "Reportistica tecnica per la comunicazione con l'ente",
@@ -16,25 +16,21 @@ export default function ServiziService2() {
   return (
     <section className="service-section">
       <div className="service-container">
-        <div className="service-grid">
-          <div className="service-image-wrapper">
-            <Image
-              src="/photo-children.png"
-              alt=""
-              fill
-              style={{ objectFit: "cover", objectPosition: "center 35%", filter: "grayscale(1) contrast(1.04)" }}
-            />
-            <div className="service-image-accent" />
-          </div>
+        {/* SECTION HEADER - Full width */}
+        <div className="section-header">
+          <span className="service-label">SERVIZIO 2</span>
+          <h2 className="service-title">
+            Rendicontazione &amp; <em style={{ fontStyle: "italic", fontWeight: 400 }}>Reportistica</em>
+          </h2>
+          <p className="service-subtitle">
+            Rendicontazione tecnica ed economica per progetti finanziati
+          </p>
+        </div>
 
+        {/* TWO COLUMNS BELOW */}
+        <div className="service-grid">
+          {/* LEFT COLUMN */}
           <div className="service-content">
-            <span className="service-label">SERVIZIO 2</span>
-            <h2 className="service-title">
-              Rendicontazione &amp; <em style={{ fontStyle: "italic", fontWeight: 400 }}>Reportistica</em>
-            </h2>
-            <p className="service-subtitle">
-              Rendicontazione tecnica ed economica per progetti finanziati
-            </p>
             <p className="service-body">
               La rendicontazione è la fase in cui un progetto finanziato si chiude con
               l&apos;ente che lo ha finanziato. È anche la fase che determina, nei fatti, la
@@ -51,17 +47,19 @@ export default function ServiziService2() {
 
             <div className="service-subsection">
               <h3 className="subsection-title">Cosa include il servizio</h3>
-              <ul className="service-list">
+              <div className="service-tags-wrapper">
                 {serviceItems.map((item, i) => (
-                  <li key={i} className="service-list-item">
-                    <span className="list-dash">–</span>
+                  <span key={i} className="service-tag">
                     {item}
-                  </li>
+                  </span>
                 ))}
-              </ul>
+              </div>
             </div>
+          </div>
 
-            <div className="service-subsection">
+          {/* RIGHT COLUMN */}
+          <div className="service-right">
+            <div className="outcome-box">
               <h3 className="subsection-title">Cosa cambia per l&apos;organizzazione</h3>
               <p className="service-body">
                 La chiusura ordinata dei progetti finanziati, l&apos;assenza di criticità nei
@@ -70,6 +68,15 @@ export default function ServiziService2() {
                 successive.
               </p>
             </div>
+
+            <div className="service-image-wrapper">
+              <Image
+                src="/servizio2-image.png"
+                alt=""
+                fill
+                style={{ objectFit: "cover", objectPosition: "center" }}
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -77,15 +84,19 @@ export default function ServiziService2() {
       <style jsx>{`
         .service-section {
           padding: 140px 0;
+          border-top: 1px solid var(--line);
         }
         .service-container {
           max-width: 1240px;
           margin: 0 auto;
           padding: 0 72px;
         }
+        .section-header {
+          margin-bottom: 48px;
+        }
         .service-grid {
           display: grid;
-          grid-template-columns: 1fr 1.2fr;
+          grid-template-columns: 1.2fr 1fr;
           gap: 96px;
           align-items: start;
         }
@@ -132,41 +143,45 @@ export default function ServiziService2() {
           letter-spacing: -0.005em;
           margin-bottom: 20px;
         }
-        .service-list {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-        }
-        .service-list-item {
+        .service-tags-wrapper {
           display: flex;
-          align-items: flex-start;
+          flex-wrap: wrap;
           gap: 12px;
-          font-size: 12.5px;
-          line-height: 1.65;
-          color: var(--ink-soft);
-          margin-bottom: 10px;
+          align-items: flex-start;
         }
-        .list-dash {
-          color: var(--accent);
-          flex-shrink: 0;
+        .service-tag {
+          padding: 8px 16px;
+          border: 1px solid var(--accent);
+          border-radius: 20px;
+          font-size: 12.5px;
+          line-height: 1.5;
+          color: var(--ink-soft);
+          white-space: normal;
+          flex: 0 1 auto;
+        }
+        .service-right {
+          display: flex;
+          flex-direction: column;
+          gap: 32px;
+        }
+        .outcome-box {
+          border: 1px solid var(--line);
+          border-radius: 16px;
+          padding: 32px;
+        }
+        .outcome-box .subsection-title {
+          margin-top: 0;
+        }
+        .outcome-box .service-body {
+          margin-bottom: 0;
         }
         .service-image-wrapper {
           position: relative;
           width: 100%;
-          aspect-ratio: 3/4;
+          aspect-ratio: 4/3;
           overflow: hidden;
           background: var(--paper-2);
-          border-radius: 20px;
-        }
-        .service-image-accent {
-          position: absolute;
-          left: 24px;
-          top: 24px;
-          width: 72px;
-          height: 72px;
-          border-radius: 50%;
-          background: radial-gradient(120% 130% at 30% 30%, #fbe8b6 0%, #f5c4a8 40%, #e7c0eb 75%, #d9c5e6 100%);
-          box-shadow: 0 0 24px rgba(217,130,95,.4);
+          border-radius: 16px;
         }
         
         @media (max-width: 768px) {
@@ -193,6 +208,12 @@ export default function ServiziService2() {
           }
           .service-subsection {
             margin-top: 32px;
+          }
+          .service-right {
+            order: -1;
+          }
+          .outcome-box {
+            padding: 24px;
           }
         }
       `}</style>
