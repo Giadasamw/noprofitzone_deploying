@@ -16,16 +16,21 @@ export default function ServiziService1() {
   return (
     <section className="service-section">
       <div className="service-container">
+        {/* SECTION HEADER - Full width */}
+        <div className="section-header">
+          <span className="service-label">SERVIZIO 1</span>
+          <h2 className="service-title">
+            Bandi &amp; <em style={{ fontStyle: "italic", fontWeight: 400 }}>Progettazione</em>
+          </h2>
+          <p className="service-subtitle">
+            Scrittura bandi e progettazione per il terzo settore
+          </p>
+        </div>
+
+        {/* TWO COLUMNS BELOW */}
         <div className="service-grid">
           {/* LEFT COLUMN */}
           <div className="service-content">
-            <span className="service-label">SERVIZIO 1</span>
-            <h2 className="service-title">
-              Bandi &amp; <em style={{ fontStyle: "italic", fontWeight: 400 }}>Progettazione</em>
-            </h2>
-            <p className="service-subtitle">
-              Scrittura bandi e progettazione per il terzo settore
-            </p>
             <p className="service-body">
               Lo studio lavora sui bandi delle principali fondazioni filantropiche
               italiane — Fondazione Cariplo, Compagnia di San Paolo, Fondazione CRT e
@@ -81,6 +86,9 @@ export default function ServiziService1() {
           max-width: 1240px;
           margin: 0 auto;
           padding: 0 72px;
+        }
+        .section-header {
+          margin-bottom: 48px;
         }
         .service-grid {
           display: grid;
