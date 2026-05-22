@@ -66,12 +66,11 @@ export default function ServiziService1() {
 
             <div className="service-image-wrapper">
               <Image
-                src="/photo-studio.png"
+                src="/servizio1-image.jpg"
                 alt=""
                 fill
-                style={{ objectFit: "cover", objectPosition: "center", filter: "grayscale(1) contrast(1.04)" }}
+                style={{ objectFit: "cover", objectPosition: "center" }}
               />
-              <div className="service-image-accent" />
             </div>
           </div>
         </div>
@@ -178,16 +177,6 @@ export default function ServiziService1() {
           overflow: hidden;
           background: var(--paper-2);
           border-radius: 16px;
-        }
-        .service-image-accent {
-          position: absolute;
-          right: 24px;
-          top: 24px;
-          width: 72px;
-          height: 72px;
-          border-radius: 50%;
-          background: radial-gradient(120% 130% at 70% 30%, #f5d76a 0%, #f3a07a 35%, #e0a4e8 75%, #cdb9e8 100%);
-          box-shadow: 0 0 24px rgba(217,130,95,.4);
         }
         
         @media (max-width: 768px) {
