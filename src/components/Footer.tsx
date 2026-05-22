@@ -33,8 +33,13 @@ export default function Footer() {
 
           <div>
             <h5 style={footerLabel}>Naviga</h5>
-            {["Home", "Servizi & Metodo", "Chi siamo", "Contatti"].map((l) => (
-              <a key={l} href="#" style={{ ...footerText, display: "block", marginBottom: 6 }}>{l}</a>
+            {[
+              { label: "Home", href: "/" },
+              { label: "Servizi & Metodo", href: "/servizi-e-metodo" },
+              { label: "Chi siamo", href: "#" },
+              { label: "Contatti", href: "#" },
+            ].map((l) => (
+              <a key={l.label} href={l.href} style={{ ...footerText, display: "block", marginBottom: 6 }}>{l.label}</a>
             ))}
           </div>
 

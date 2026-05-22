@@ -1,10 +1,19 @@
 "use client";
 
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
+
+const navLinks = [
+  { label: "Home", href: "/" },
+  { label: "Servizi & Metodo", href: "/servizi-e-metodo" },
+  { label: "Chi siamo", href: "#" },
+  { label: "Contatti", href: "#" },
+];
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header
@@ -19,7 +28,7 @@ export default function Header() {
       }}
     >
       <div className="header-container">
-        <a href="#" aria-label="No Profit Zone">
+        <a href="/" aria-label="No Profit Zone">
           <Image src="/logo-npz.png" alt="No Profit Zone" height={53} width={192} style={{ height: 53, width: "auto" }} className="header-logo" />
         </a>
 
@@ -38,23 +47,26 @@ export default function Header() {
 
         {/* Desktop nav */}
         <nav className="desktop-nav">
-          {["Home", "Servizi & Metodo", "Chi siamo", "Contatti"].map((item, i) => (
-            <a
-              key={item}
-              href="#"
-              style={{
-                fontFamily: '"Mallory", sans-serif',
-                fontSize: 11,
-                letterSpacing: "0.04em",
-                textTransform: "uppercase",
-                color: "var(--ink)",
-                position: "relative",
-                ...(i === 0 ? { borderBottom: "1px solid var(--ink)", paddingBottom: 4 } : {}),
-              }}
-            >
-              {item}
-            </a>
-          ))}
+          {navLinks.map((item) => {
+            const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
+            return (
+              <a
+                key={item.label}
+                href={item.href}
+                style={{
+                  fontFamily: '"Mallory", sans-serif',
+                  fontSize: 11,
+                  letterSpacing: "0.04em",
+                  textTransform: "uppercase",
+                  color: "var(--ink)",
+                  position: "relative",
+                  ...(isActive ? { borderBottom: "1px solid var(--ink)", paddingBottom: 4 } : {}),
+                }}
+              >
+                {item.label}
+              </a>
+            );
+          })}
         </nav>
 
         <a
@@ -78,23 +90,26 @@ export default function Header() {
       {menuOpen && (
         <div className="mobile-nav-overlay">
           <nav style={{ display: "flex", flexDirection: "column", gap: 24, padding: "32px 24px" }}>
-            {["Home", "Servizi & Metodo", "Chi siamo", "Contatti"].map((item, i) => (
-              <a
-                key={item}
-                href="#"
-                onClick={() => setMenuOpen(false)}
-                style={{
-                  fontFamily: '"Mallory", sans-serif',
-                  fontSize: 14,
-                  letterSpacing: "0.04em",
-                  textTransform: "uppercase",
-                  color: "var(--ink)",
-                  ...(i === 0 ? { borderBottom: "1px solid var(--ink)", paddingBottom: 4, alignSelf: "flex-start" } : {}),
-                }}
-              >
-                {item}
-              </a>
-            ))}
+            {navLinks.map((item) => {
+              const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
+              return (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  onClick={() => setMenuOpen(false)}
+                  style={{
+                    fontFamily: '"Mallory", sans-serif',
+                    fontSize: 14,
+                    letterSpacing: "0.04em",
+                    textTransform: "uppercase",
+                    color: "var(--ink)",
+                    ...(isActive ? { borderBottom: "1px solid var(--ink)", paddingBottom: 4, alignSelf: "flex-start" } : {}),
+                  }}
+                >
+                  {item.label}
+                </a>
+              );
+            })}
             <a
               href="#"
               style={{
