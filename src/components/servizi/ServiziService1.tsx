@@ -16,15 +16,21 @@ export default function ServiziService1() {
   return (
     <section className="service-section">
       <div className="service-container">
+        {/* SECTION HEADER - Full width */}
+        <div className="section-header">
+          <span className="service-label">SERVIZIO 1</span>
+          <h2 className="service-title">
+            Bandi &amp; <em style={{ fontStyle: "italic", fontWeight: 400 }}>Progettazione</em>
+          </h2>
+          <p className="service-subtitle">
+            Scrittura bandi e progettazione per il terzo settore
+          </p>
+        </div>
+
+        {/* TWO COLUMNS BELOW */}
         <div className="service-grid">
+          {/* LEFT COLUMN */}
           <div className="service-content">
-            <span className="service-label">SERVIZIO 1</span>
-            <h2 className="service-title">
-              Bandi &amp; <em style={{ fontStyle: "italic", fontWeight: 400 }}>Progettazione</em>
-            </h2>
-            <p className="service-subtitle">
-              Scrittura bandi e progettazione per il terzo settore
-            </p>
             <p className="service-body">
               Lo studio lavora sui bandi delle principali fondazioni filantropiche
               italiane — Fondazione Cariplo, Compagnia di San Paolo, Fondazione CRT e
@@ -36,17 +42,19 @@ export default function ServiziService1() {
 
             <div className="service-subsection">
               <h3 className="subsection-title">Cosa include il servizio</h3>
-              <ul className="service-list">
+              <div className="service-tags-wrapper">
                 {serviceItems.map((item, i) => (
-                  <li key={i} className="service-list-item">
-                    <span className="list-dash">–</span>
+                  <span key={i} className="service-tag">
                     {item}
-                  </li>
+                  </span>
                 ))}
-              </ul>
+              </div>
             </div>
+          </div>
 
-            <div className="service-subsection">
+          {/* RIGHT COLUMN */}
+          <div className="service-right">
+            <div className="outcome-box">
               <h3 className="subsection-title">Cosa cambia per l&apos;organizzazione</h3>
               <p className="service-body">
                 Una maggiore probabilità di ottenere il finanziamento; la riduzione del
@@ -55,16 +63,15 @@ export default function ServiziService1() {
                 che internamente si dà per scontato.
               </p>
             </div>
-          </div>
 
-          <div className="service-image-wrapper">
-            <Image
-              src="/photo-studio.png"
-              alt=""
-              fill
-              style={{ objectFit: "cover", objectPosition: "center", filter: "grayscale(1) contrast(1.04)" }}
-            />
-            <div className="service-image-accent" />
+            <div className="service-image-wrapper">
+              <Image
+                src="/servizio1-image.jpg"
+                alt=""
+                fill
+                style={{ objectFit: "cover", objectPosition: "center" }}
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -78,6 +85,9 @@ export default function ServiziService1() {
           max-width: 1240px;
           margin: 0 auto;
           padding: 0 72px;
+        }
+        .section-header {
+          margin-bottom: 48px;
         }
         .service-grid {
           display: grid;
@@ -128,41 +138,45 @@ export default function ServiziService1() {
           letter-spacing: -0.005em;
           margin-bottom: 20px;
         }
-        .service-list {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-        }
-        .service-list-item {
+        .service-tags-wrapper {
           display: flex;
-          align-items: flex-start;
+          flex-wrap: wrap;
           gap: 12px;
-          font-size: 12.5px;
-          line-height: 1.65;
-          color: var(--ink-soft);
-          margin-bottom: 10px;
+          align-items: flex-start;
         }
-        .list-dash {
-          color: var(--accent);
-          flex-shrink: 0;
+        .service-tag {
+          padding: 8px 16px;
+          border: 1px solid var(--accent);
+          border-radius: 20px;
+          font-size: 12.5px;
+          line-height: 1.5;
+          color: var(--ink-soft);
+          white-space: normal;
+          flex: 0 1 auto;
+        }
+        .service-right {
+          display: flex;
+          flex-direction: column;
+          gap: 32px;
+        }
+        .outcome-box {
+          border: 1px solid var(--line);
+          border-radius: 16px;
+          padding: 32px;
+        }
+        .outcome-box .subsection-title {
+          margin-top: 0;
+        }
+        .outcome-box .service-body {
+          margin-bottom: 0;
         }
         .service-image-wrapper {
           position: relative;
           width: 100%;
-          aspect-ratio: 3/4;
+          aspect-ratio: 4/3;
           overflow: hidden;
           background: var(--paper-2);
-          border-radius: 20px;
-        }
-        .service-image-accent {
-          position: absolute;
-          right: 24px;
-          top: 24px;
-          width: 72px;
-          height: 72px;
-          border-radius: 50%;
-          background: radial-gradient(120% 130% at 70% 30%, #f5d76a 0%, #f3a07a 35%, #e0a4e8 75%, #cdb9e8 100%);
-          box-shadow: 0 0 24px rgba(217,130,95,.4);
+          border-radius: 16px;
         }
         
         @media (max-width: 768px) {
@@ -174,7 +188,7 @@ export default function ServiziService1() {
           }
           .service-grid {
             display: flex;
-            flex-direction: column-reverse;
+            flex-direction: column;
             gap: 40px;
           }
           .service-title {
@@ -189,6 +203,12 @@ export default function ServiziService1() {
           }
           .service-subsection {
             margin-top: 32px;
+          }
+          .service-right {
+            order: -1;
+          }
+          .outcome-box {
+            padding: 24px;
           }
         }
       `}</style>
