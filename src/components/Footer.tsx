@@ -36,8 +36,8 @@ export default function Footer() {
             {[
               { label: "Home", href: "/" },
               { label: "Servizi & Metodo", href: "/servizi-e-metodo" },
-              { label: "Chi siamo", href: "#" },
-              { label: "Contatti", href: "#" },
+              { label: "Chi siamo", href: "/chi-siamo" },
+              { label: "Contatti", href: "/contatti" },
             ].map((l) => (
               <a key={l.label} href={l.href} style={{ ...footerText, display: "block", marginBottom: 6 }}>{l.label}</a>
             ))}
@@ -45,8 +45,8 @@ export default function Footer() {
 
           <div>
             <h5 style={footerLabel}>Contatti</h5>
-            <a href="#" style={{ ...footerText, display: "block", marginBottom: 6 }}>hello@noprofitzone.it</a>
-            <a href="#" style={{ ...footerText, display: "block", marginTop: 10 }}>→ Prenota una call</a>
+            <a href="mailto:hello@noprofitzone.it" style={{ ...footerText, display: "block", marginBottom: 6 }}>hello@noprofitzone.it</a>
+            <a href="/contatti" style={{ ...footerText, display: "block", marginTop: 10 }}>→ Prenota una call</a>
           </div>
 
           <div>
