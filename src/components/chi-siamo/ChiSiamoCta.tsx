@@ -1,6 +1,6 @@
 "use client";
 
-export default function ServiziCta() {
+export default function ChiSiamoCta() {
   return (
     <section className="cta-section">
       <div className="cta-container">
@@ -18,13 +18,12 @@ export default function ServiziCta() {
               — Iniziamo
             </p>
             <h2 className="cta-title">
-              Una call di analisi, di{" "}
-              <em style={{ fontStyle: "italic", fontWeight: 400 }}>trenta minuti.</em>
+              Una prima conversazione per{" "}
+              <em style={{ fontStyle: "italic", fontWeight: 400 }}>capirsi.</em>
             </h2>
             <p className="cta-body">
-              Una prima conversazione utile a capire se quello che lo studio fa è
-              coerente con quello che l&apos;organizzazione sta cercando, e a definire
-              eventualmente come.
+              Il modo migliore per valutare se lo studio è il partner giusto per
+              l&apos;organizzazione è una call conoscitiva di trenta minuti.
             </p>
             <a
               href="/contatti"
@@ -108,7 +107,7 @@ export default function ServiziCta() {
           display: flex;
           justify-content: flex-end;
           position: relative;
-          z-index: 1;
+          zIndex: 1;
           text-align: right;
         }
         
