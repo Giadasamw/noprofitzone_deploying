@@ -9,8 +9,8 @@ export default function ServiziHero() {
           <em style={{ fontStyle: "italic", fontWeight: 400 }}>rendicontazione.</em>
         </h1>
         <p className="servizi-hero-subtitle">
-          Due servizi pensati per lavorare in sequenza, lungo l&apos;intero ciclo di
-          un bando finanziato.
+          Servizi pensati per lavorare sequenzialmente, lungo l&apos;intero ciclo del
+          progetto finanziato.
         </p>
       </div>
 

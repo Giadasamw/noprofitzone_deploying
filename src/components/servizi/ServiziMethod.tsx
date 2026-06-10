@@ -3,39 +3,33 @@
 const steps = [
   {
     num: "01",
-    title: "Analisi del bando e dell'organizzazione",
-    body: "Studio del bando in dettaglio: criteri di valutazione, vincoli, budget massimi, scadenze. Valutazione del fit con l'organizzazione cliente. Se il bando non è adatto, la valutazione è comunicata prima dell'incarico.",
+    title: "Ricerca e analisi del bando",
+    body: "Ricerca e analisi approfondita del bando più adatto al settore di riferimento dell'organizzazione: criteri di valutazione, requisiti, budget disponibili e scadenze. Se il bando non presenta condizioni adeguate, la valutazione viene comunicata prima di formalizzare la collaborazione.",
     tag: "FASE 1",
   },
   {
     num: "02",
     title: "Strategia di candidatura",
-    body: "Definizione dell'angolo della proposta, del posizionamento dell'organizzazione, della storia che il progetto racconterà al comitato di valutazione.",
+    body: "Individuazione del valore distintivo della proposta e costruzione della narrazione progettuale: una storia chiara e convincente che parli direttamente ai criteri di valutazione del comitato.",
     tag: "FASE 2",
   },
   {
     num: "03",
-    title: "Progettazione tecnica",
-    body: "Costruzione di obiettivi specifici, attività, indicatori di risultato, cronoprogramma e budget. Verifica della coerenza con i criteri del bando.",
+    title: "Progettazione e redazione della proposta",
+    body: "Costruzione della struttura del progetto — obiettivi, attività, indicatori di risultato, cronoprogramma, piano economico — e redazione della proposta con un linguaggio chiaro ed efficace, tecnico dove richiesto. Ogni sezione viene sviluppata per rispondere in modo mirato ai criteri di valutazione del bando.",
     tag: "FASE 3",
   },
   {
     num: "04",
-    title: "Scrittura della proposta",
-    body: "Redazione in linguaggio chiaro, narrativo dove serve, tecnico dove richiesto. Ogni sezione è scritta per rispondere a uno specifico criterio di valutazione.",
+    title: "Documentazione e candidatura",
+    body: "Preparazione della documentazione completa — modulistica, allegati, anagrafiche, dichiarazioni — e verifica della conformità formale dell'intera candidatura. Presentazione entro i termini previsti e, quando necessario, partecipazione ai colloqui presso l'ente finanziatore.",
     tag: "FASE 4",
   },
   {
     num: "05",
-    title: "Gestione documentale e candidatura",
-    body: "Preparazione di modulistica, allegati, anagrafiche, dichiarazioni. Verifica della conformità formale. Presentazione della candidatura entro la scadenza.",
+    title: "Rendicontazione",
+    body: "All'approvazione del progetto si attiva la rendicontazione tecnica ed economica: monitoraggio delle spese, raccolta dei giustificativi, compilazione della documentazione — manuale o tramite piattaforma — in modo continuativo durante l'implementazione, così da gestire tempestivamente gli stati di avanzamento lavori. Al termine, redazione della relazione finale per l'ente finanziatore.",
     tag: "FASE 5",
-  },
-  {
-    num: "06",
-    title: "Rendicontazione tecnica ed economica",
-    body: "Se il progetto è finanziato: monitoraggio delle spese, predisposizione della rendicontazione secondo i criteri dell'ente finanziatore, redazione delle relazioni finali.",
-    tag: "FASE 6",
   },
 ];
 
@@ -53,12 +47,11 @@ export default function ServiziMethod() {
               fontWeight: 700,
             }}
           >
-            Il metodo, in <em style={{ fontStyle: "italic", fontWeight: 400 }}>sei fasi.</em>
+            Il metodo, in <em style={{ fontStyle: "italic", fontWeight: 400 }}>cinque fasi.</em>
           </h2>
           <p className="method-intro">
-            Ogni collaborazione segue lo stesso percorso strutturato. Tempi
-            prevedibili, qualità verificabile in ogni passaggio, una sola persona di
-            riferimento dall&apos;inizio alla fine.
+            Ogni progetto segue lo stesso percorso, dalla prima analisi alla
+            chiusura.
           </p>
         </div>
 
