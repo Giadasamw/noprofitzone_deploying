@@ -38,7 +38,7 @@ export default function PrivacyContent() {
             </p>
             <p className="privacy-p">
               Per qualsiasi richiesta relativa al trattamento dei dati è possibile scrivere
-              a <a className="privacy-link" href="mailto:hello@noprofitzone.it">hello@noprofitzone.it</a>.
+              a <a className="privacy-link" href="mailto:infonoprofitzone@gmail.com">infonoprofitzone@gmail.com</a>.
             </p>
           </article>
 
@@ -181,7 +181,7 @@ export default function PrivacyContent() {
             </p>
             <p className="privacy-p">
               Per esercitare i tuoi diritti scrivi a{" "}
-              <a className="privacy-link" href="mailto:hello@noprofitzone.it">hello@noprofitzone.it</a>.
+              <a className="privacy-link" href="mailto:infonoprofitzone@gmail.com">infonoprofitzone@gmail.com</a>.
             </p>
           </article>
 
