@@ -6,7 +6,7 @@ const CALENDLY_URL = "https://calendly.com/infonoprofitzone/30min";
 
 // Access key pubblica di Web3Forms, legata a infonoprofitzone@gmail.com.
 // Si ottiene su https://web3forms.com inserendo quella casella.
-const WEB3FORMS_ACCESS_KEY = "YOUR-WEB3FORMS-ACCESS-KEY";
+const WEB3FORMS_ACCESS_KEY = "c0eb69c6-83a7-4fbb-89f2-9232e3448f87";
 
 const monoStyle: React.CSSProperties = {
   fontFamily: '"Mallory", sans-serif',
