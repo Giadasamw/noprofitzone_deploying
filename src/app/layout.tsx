@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -18,6 +19,26 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="it">
+      <head>
+        {/* Google Tag Manager */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-W2M5TCLYSP"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-W2M5TCLYSP');
+            `,
+          }}
+        />
+      </head>
       <body>{children}</body>
     </html>
   );
