@@ -11,7 +11,7 @@ import ServiziCta from "@/components/servizi/ServiziCta";
 export const metadata: Metadata = {
   title: "Chi siamo | Lo studio | No Profit Zone Milano",
   description:
-    "No Profit Zone è uno studio milanese di consulenza per bandi e rendicontazione, fondato da Nicoletta Allarà e Olivia Salvi. Scopri lo studio e il metodo di lavoro.",
+    "No Profit Zone è uno studio di consulenza per bandi e rendicontazione, fondato da Nicoletta Allarà e Olivia Salvi. Scopri lo studio e il metodo di lavoro.",
 };
 
 const jsonLd = {

@@ -14,7 +14,7 @@ export default function About() {
               Le persone <em style={{ fontStyle: "italic", fontWeight: 400 }}>dello studio.</em>
             </h2>
             <p style={paraStyle}>
-              No Profit Zone è uno studio milanese fondato da Nicoletta Allarà e Olivia Salvi.
+              No Profit Zone è uno studio fondato da Nicoletta Allarà e Olivia Salvi.
               Nicoletta si occupa di analisi dei bandi, strategia di candidatura e scrittura
               delle proposte. Olivia si occupa di gestione documentale, rendicontazione
               tecnica ed economica, reportistica per gli enti finanziatori.

@@ -9,7 +9,7 @@ export default function ChiSiamoHero() {
           <em style={{ fontStyle: "italic", fontWeight: 400 }}>non per dimensione.</em>
         </h1>
         <p className="chisiamo-hero-subtitle">
-          No Profit Zone è uno studio milanese di due persone, fondato da Nicoletta Allarà
+          No Profit Zone è uno studio di due persone, fondato da Nicoletta Allarà
           e Olivia Salvi, che lavora con fondazioni, ONG ed enti culturali sull&apos;intero
           ciclo di un progetto finanziato.
         </p>
