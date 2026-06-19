@@ -4,6 +4,10 @@ import { useState, FormEvent } from "react";
 
 const CALENDLY_URL = "https://calendly.com/infonoprofitzone/30min";
 
+// Access key pubblica di Web3Forms, legata a infonoprofitzone@gmail.com.
+// Si ottiene su https://web3forms.com inserendo quella casella.
+const WEB3FORMS_ACCESS_KEY = "YOUR-WEB3FORMS-ACCESS-KEY";
+
 const monoStyle: React.CSSProperties = {
   fontFamily: '"Mallory", sans-serif',
   fontSize: 11,
@@ -53,6 +57,7 @@ export default function ContattiBooking() {
   const [errors, setErrors] = useState<Partial<Record<keyof FormState, string>>>({});
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   function validate(): boolean {
     const next: Partial<Record<keyof FormState, string>> = {};
@@ -71,15 +76,38 @@ export default function ContattiBooking() {
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
+    setSubmitError(null);
     if (!validate()) return;
 
     setSubmitting(true);
-    // TODO: Connect to form backend (Formspree, Resend, or similar)
-    console.log("Contatti form submission:", form);
-    await new Promise((resolve) => setTimeout(resolve, 600));
-    setSubmitting(false);
-    setSuccess(true);
-    setForm(initialState);
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `Nuova richiesta dal sito — ${form.organizzazione || form.nome}`,
+          from_name: "No Profit Zone — Contatti sito",
+          replyto: form.email,
+          nome: form.nome,
+          organizzazione: form.organizzazione,
+          email: form.email,
+          bando: form.bando || "—",
+          messaggio: form.messaggio,
+        }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setSuccess(true);
+        setForm(initialState);
+      } else {
+        setSubmitError("Invio non riuscito. Riprova o scrivici a infonoprofitzone@gmail.com.");
+      }
+    } catch {
+      setSubmitError("Si è verificato un errore di rete. Riprova tra poco.");
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   function update<K extends keyof FormState>(key: K, value: FormState[K]) {
@@ -130,6 +158,16 @@ export default function ContattiBooking() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} noValidate>
+                {/* Honeypot anti-spam Web3Forms: invisibile agli utenti reali */}
+                <input
+                  type="checkbox"
+                  name="botcheck"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  style={{ display: "none" }}
+                  aria-hidden="true"
+                />
+
                 <div className="field">
                   <label className="field-label" htmlFor="nome">Nome e cognome</label>
                   <input
@@ -207,6 +245,12 @@ export default function ContattiBooking() {
                   </label>
                   {errors.privacy && <span className="field-error">{errors.privacy}</span>}
                 </div>
+
+                {submitError && (
+                  <span className="field-error" style={{ display: "block", marginBottom: 16 }}>
+                    {submitError}
+                  </span>
+                )}
 
                 <button type="submit" className="submit-btn" disabled={submitting}>
                   {submitting ? "Invio in corso…" : "Invia la richiesta"}{" "}
