@@ -60,7 +60,6 @@ export default function ForWhom() {
       <style jsx>{`
         .forwhom-section {
           padding: 140px 0;
-          border-top: 1px solid var(--line);
         }
         .forwhom-container {
           max-width: 1240px;

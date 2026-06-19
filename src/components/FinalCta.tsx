@@ -71,6 +71,7 @@ export default function FinalCta() {
         .cta-section {
           margin: 120px 0;
           padding: 0;
+          border-top: 1px solid var(--line);
         }
         .cta-container {
           max-width: 1240px;
