@@ -2,7 +2,7 @@
 
 import { useState, FormEvent } from "react";
 
-const CALENDLY_URL = "https://calendly.com/noprofitzone/call"; // Replace with actual Calendly link
+const CALENDLY_URL = "https://calendly.com/giadapacchioni-co/30min";
 
 const monoStyle: React.CSSProperties = {
   fontFamily: '"Mallory", sans-serif',
