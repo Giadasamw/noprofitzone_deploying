@@ -28,7 +28,7 @@ export default function FinalCta() {
               utile, e in che termini.
             </p>
             <a
-              href="#"
+              href="/contatti"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
