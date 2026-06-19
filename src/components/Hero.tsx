@@ -28,7 +28,7 @@ export default function Hero() {
             </p>
 
             <div className="hero-buttons">
-              <a href="#" style={pillStyle("filled")}>
+              <a href="/contatti" style={pillStyle("filled")}>
                 Prenota una call <span style={{ fontFamily: '"Mackinac", serif', fontSize: 11.2 }}>→</span>
               </a>
               <a href="#" style={pillStyle("ghost")}>
