@@ -5,6 +5,7 @@ import ChiSiamoHero from "@/components/chisiamo/ChiSiamoHero";
 import ChiSiamoMission from "@/components/chisiamo/ChiSiamoMission";
 import ChiSiamoTeam from "@/components/chisiamo/ChiSiamoTeam";
 import WhyBoutique from "@/components/WhyBoutique";
+import WhoWeWorkWith from "@/components/chisiamo/WhoWeWorkWith";
 import ServiziCta from "@/components/servizi/ServiziCta";
 
 export const metadata: Metadata = {
@@ -56,6 +57,7 @@ export default function ChiSiamo() {
         <ChiSiamoMission />
         <WhyBoutique />
         <ChiSiamoTeam />
+        <WhoWeWorkWith />
         <ServiziCta />
       </main>
       <Footer />
