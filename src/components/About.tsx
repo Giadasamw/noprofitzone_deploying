@@ -23,7 +23,7 @@ export default function About() {
               Lavorano insieme su ogni progetto, dalla prima analisi alla chiusura.
             </p>
             <a
-              href="#"
+              href="/chi-siamo"
               style={{
                 fontFamily: '"Mallory", sans-serif',
                 fontSize: 11,

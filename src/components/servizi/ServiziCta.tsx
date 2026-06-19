@@ -27,7 +27,7 @@ export default function ServiziCta() {
               eventualmente come.
             </p>
             <a
-              href="#"
+              href="/contatti"
               style={{
                 display: "inline-flex",
                 alignItems: "center",

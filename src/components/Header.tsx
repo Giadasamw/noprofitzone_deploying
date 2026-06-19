@@ -7,8 +7,8 @@ import { useState } from "react";
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "Servizi & Metodo", href: "/servizi-e-metodo" },
-  { label: "Chi siamo", href: "#" },
-  { label: "Contatti", href: "#" },
+  { label: "Chi siamo", href: "/chi-siamo" },
+  { label: "Contatti", href: "/contatti" },
 ];
 
 export default function Header() {
@@ -70,7 +70,7 @@ export default function Header() {
         </nav>
 
         <a
-          href="#"
+          href="/contatti"
           className="desktop-cta"
           style={{
             fontFamily: '"Mallory", sans-serif',
@@ -111,7 +111,7 @@ export default function Header() {
               );
             })}
             <a
-              href="#"
+              href="/contatti"
               style={{
                 fontFamily: '"Mallory", sans-serif',
                 fontSize: 12,
