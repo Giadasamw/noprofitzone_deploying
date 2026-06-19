@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "No Profit Zone │ Consulenza bandi e rendicontazione per il terzo settore",
   description:
     "Studio milanese di consulenza per bandi e rendicontazione. Lavoriamo con fondazioni, ONG ed enti culturali sull'intero ciclo di un progetto finanziato, dalla candidatura alla relazione finale.",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
