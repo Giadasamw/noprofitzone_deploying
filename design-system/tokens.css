@@ -1,0 +1,88 @@
+/* ==========================================================================
+   No Profit Zone — Design Tokens
+   Drop-in stylesheet. Import first, then build on top of these variables.
+   Fonte: src/app/globals.css
+   ========================================================================== */
+
+:root {
+  /* ── Colore ── */
+  --paper:         #faf6ec; /* sfondo (carta) */
+  --paper-2:       #f3e0d0; /* superficie secondaria */
+  --ink:           #4a4744; /* testo primario */
+  --ink-soft:      #5a544d; /* testo secondario */
+  --muted:         #8a8175; /* label / eyebrow / meta */
+  --line:          #e3d9c4; /* bordi */
+  --line-soft:     #ece3d2; /* divisori tenui */
+  --accent:        #cc5a2c; /* terracotta — azione */
+  --accent-deep:   #a8451f; /* accento hover */
+  --accent-yellow: #f5d76a; /* decorativo */
+  --accent-lilac:  #e0a4e8; /* decorativo */
+
+  --gradient:      radial-gradient(120% 130% at 70% 30%, #f5d76a 0%, #f3a07a 35%, #e0a4e8 75%, #cdb9e8 100%);
+  --gradient-soft: radial-gradient(120% 130% at 30% 30%, #fbe8b6 0%, #f5c4a8 40%, #e7c0eb 75%, #d9c5e6 100%);
+
+  /* ── Tipografia ── */
+  --font-serif: "Mackinac", "Iowan Old Style", Georgia, serif;
+  --font-sans:  "Mallory", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* Scala (rem, base 16px) — proporzioni del sito rese portabili */
+  --text-display: clamp(2.1rem, 3.6vw, 3.15rem); /* H1 */
+  --text-h2:      clamp(1.4rem, 2.2vw, 2.1rem);
+  --text-h3:      1.6rem;
+  --text-h4:      1.05rem;
+  --text-lead:    1rem;
+  --text-body:    0.85rem;
+  --text-small:   0.78rem;
+  --text-label:   0.7rem;
+
+  --lh-tight:  1.05;
+  --lh-snug:   1.15;
+  --lh-normal: 1.6;
+  --lh-relaxed:1.65;
+
+  --ls-display: -0.018em;
+  --ls-heading: -0.012em;
+  --ls-tight:   -0.005em;
+  --ls-nav:      0.04em;
+  --ls-label:    0.24em; /* eyebrow uppercase */
+
+  /* ── Spacing (base 4px) ── */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-14: 56px;
+  --space-16: 64px;
+  --space-24: 96px;
+  --space-30: 120px;
+
+  /* Sezioni */
+  --section-y-lg: 140px;
+  --section-y-md: 100px;
+  --section-y-sm: 60px;
+
+  /* ── Layout ── */
+  --container-max: 1240px;
+  --container-pad: 72px;
+  --container-pad-mobile: 24px;
+  --measure: 768px;      /* larghezza di lettura */
+  --breakpoint-mobile: 768px;
+
+  /* ── Raggi & bordi ── */
+  --radius-s: 12px;
+  --radius-m: 16px;
+  --radius-l: 20px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+  --border-line: 1px solid var(--line);
+  --border-accent: 1.5px solid var(--accent);
+
+  /* ── Transizioni ── */
+  --ease: 0.2s ease;
+}
+</content>
