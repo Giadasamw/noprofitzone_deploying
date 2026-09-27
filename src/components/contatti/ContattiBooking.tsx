@@ -3,6 +3,7 @@
 import { useState, FormEvent } from "react";
 
 const CALENDLY_URL = "https://calendly.com/infonoprofitzone/30min";
+const WEB3FORMS_ACCESS_KEY = "c0eb69c6-83a7-4fbb-89f2-9232e3448f87";
 
 const monoStyle: React.CSSProperties = {
   fontFamily: '"Mallory", sans-serif',
@@ -53,6 +54,7 @@ export default function ContattiBooking() {
   const [errors, setErrors] = useState<Partial<Record<keyof FormState, string>>>({});
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
 
   function validate(): boolean {
     const next: Partial<Record<keyof FormState, string>> = {};
@@ -74,12 +76,32 @@ export default function ContattiBooking() {
     if (!validate()) return;
 
     setSubmitting(true);
-    // TODO: Connect to form backend (Formspree, Resend, or similar)
-    console.log("Contatti form submission:", form);
-    await new Promise((resolve) => setTimeout(resolve, 600));
-    setSubmitting(false);
-    setSuccess(true);
-    setForm(initialState);
+    setSubmitError(false);
+
+    const formData = new FormData(e.target as HTMLFormElement);
+    formData.append("access_key", WEB3FORMS_ACCESS_KEY);
+    formData.append("subject", "Nuovo messaggio dal sito No Profit Zone");
+    formData.append("replyto", form.email);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: formData,
+      });
+      const result = await response.json();
+
+      if (result.success) {
+        setSuccess(true);
+        setForm(initialState);
+      } else {
+        setSubmitError(true);
+      }
+    } catch {
+      setSubmitError(true);
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   function update<K extends keyof FormState>(key: K, value: FormState[K]) {
@@ -126,14 +148,17 @@ export default function ContattiBooking() {
 
             {success ? (
               <div className="form-success">
-                Grazie! Ti risponderemo entro 24 ore lavorative.
+                Grazie! Il tuo messaggio è stato inviato, ti risponderemo presto.
               </div>
             ) : (
               <form onSubmit={handleSubmit} noValidate>
+                <input type="checkbox" name="botcheck" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
+
                 <div className="field">
                   <label className="field-label" htmlFor="nome">Nome e cognome</label>
                   <input
                     id="nome"
+                    name="nome"
                     type="text"
                     className="field-input"
                     value={form.nome}
@@ -146,6 +171,7 @@ export default function ContattiBooking() {
                   <label className="field-label" htmlFor="organizzazione">Organizzazione</label>
                   <input
                     id="organizzazione"
+                    name="organizzazione"
                     type="text"
                     className="field-input"
                     value={form.organizzazione}
@@ -158,6 +184,7 @@ export default function ContattiBooking() {
                   <label className="field-label" htmlFor="email">Email</label>
                   <input
                     id="email"
+                    name="email"
                     type="email"
                     className="field-input"
                     value={form.email}
@@ -173,6 +200,7 @@ export default function ContattiBooking() {
                   </label>
                   <input
                     id="bando"
+                    name="bando"
                     type="text"
                     className="field-input"
                     value={form.bando}
@@ -184,6 +212,7 @@ export default function ContattiBooking() {
                   <label className="field-label" htmlFor="messaggio">Raccontaci brevemente cosa cerchi</label>
                   <textarea
                     id="messaggio"
+                    name="messaggio"
                     className="field-input field-textarea"
                     value={form.messaggio}
                     onChange={(e) => update("messaggio", e.target.value)}
@@ -207,6 +236,12 @@ export default function ContattiBooking() {
                   </label>
                   {errors.privacy && <span className="field-error">{errors.privacy}</span>}
                 </div>
+
+                {submitError && (
+                  <div className="field-error" style={{ marginBottom: 16 }}>
+                    Qualcosa non ha funzionato. Riprova o scrivici a info@noprofitzone.com
+                  </div>
+                )}
 
                 <button type="submit" className="submit-btn" disabled={submitting}>
                   {submitting ? "Invio in corso…" : "Invia la richiesta"}{" "}
