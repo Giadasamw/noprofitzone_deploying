@@ -4,6 +4,10 @@ import { useState, FormEvent } from "react";
 
 const CALENDLY_URL = "https://calendly.com/infonoprofitzone/30min";
 
+// Web3Forms access key. Not a secret: Web3Forms keys are designed to be used
+// client-side and are scoped/rate-limited server-side by Web3Forms itself.
+const WEB3FORMS_ACCESS_KEY = "c0eb69c6-83a7-4fbb-89f2-9232e3448f87";
+
 const monoStyle: React.CSSProperties = {
   fontFamily: '"Mallory", sans-serif',
   fontSize: 11,
@@ -53,6 +57,7 @@ export default function ContattiBooking() {
   const [errors, setErrors] = useState<Partial<Record<keyof FormState, string>>>({});
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   function validate(): boolean {
     const next: Partial<Record<keyof FormState, string>> = {};
@@ -74,12 +79,39 @@ export default function ContattiBooking() {
     if (!validate()) return;
 
     setSubmitting(true);
-    // TODO: Connect to form backend (Formspree, Resend, or similar)
-    console.log("Contatti form submission:", form);
-    await new Promise((resolve) => setTimeout(resolve, 600));
-    setSubmitting(false);
-    setSuccess(true);
-    setForm(initialState);
+    setSubmitError(null);
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: "Nuova richiesta dal sito No Profit Zone",
+          from_name: form.nome,
+          nome: form.nome,
+          organizzazione: form.organizzazione,
+          email: form.email,
+          bando: form.bando,
+          messaggio: form.messaggio,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok || !data.success) {
+        throw new Error(data.message || "Invio non riuscito. Riprova più tardi.");
+      }
+
+      setSuccess(true);
+      setForm(initialState);
+    } catch (err) {
+      setSubmitError(
+        err instanceof Error ? err.message : "Invio non riuscito. Riprova più tardi."
+      );
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   function update<K extends keyof FormState>(key: K, value: FormState[K]) {
@@ -207,6 +239,8 @@ export default function ContattiBooking() {
                   </label>
                   {errors.privacy && <span className="field-error">{errors.privacy}</span>}
                 </div>
+
+                {submitError && <div className="form-error">{submitError}</div>}
 
                 <button type="submit" className="submit-btn" disabled={submitting}>
                   {submitting ? "Invio in corso…" : "Invia la richiesta"}{" "}
@@ -363,6 +397,16 @@ export default function ContattiBooking() {
           background: var(--paper-2);
           border-radius: 16px;
           padding: 24px;
+        }
+        .form-error {
+          font-size: 12.5px;
+          line-height: 1.6;
+          color: var(--accent-deep);
+          background: var(--paper-2);
+          border: 1px solid var(--accent-deep);
+          border-radius: 12px;
+          padding: 12px 16px;
+          margin-bottom: 20px;
         }
 
         @media (max-width: 968px) {
